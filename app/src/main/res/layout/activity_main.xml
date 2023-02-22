@@ -26,9 +26,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="11dp"
             android:layout_marginBottom="11dp"
+            android:elegantTextHeight="true"
+            android:fontFamily="@font/charm"
             android:text="Events!"
             android:textColor="@color/light_yl"
-            android:textSize="34sp"
+            android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="26dp" />
