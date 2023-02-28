@@ -45,14 +45,22 @@
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="60dp"
         android:clickable="true"
+        android:focusable="true"
+        android:onClick="clickFAB"
+        android:src="@drawable/baseline_question_mark_24"
         app:backgroundTint="@color/red"
+        app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.853"
+        app:maxImageSize="50dp"
         app:rippleColor="@color/light_red"
-        app:srcCompat="@android:drawable/ic_menu_add" />
+        app:tint="@color/light_yl">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
