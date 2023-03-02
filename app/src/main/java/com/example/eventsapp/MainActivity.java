@@ -2,17 +2,12 @@ package com.example.eventsapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-
-    public void clickFAB(View view) {
-        View fabPress = findViewById(R.id.newPass);
-        if(fabPress.isPressed()){
-
-        }
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

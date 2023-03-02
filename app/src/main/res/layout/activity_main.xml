@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -14,11 +15,13 @@
         android:background="@color/red"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.0"
+        tools:visibility="visible">
 
         <TextView
             android:id="@+id/mainTitle"
@@ -28,7 +31,7 @@
             android:layout_marginBottom="11dp"
             android:elegantTextHeight="true"
             android:fontFamily="@font/charm"
-            android:text="Events!"
+            android:text="@string/app_name"
             android:textColor="@color/light_yl"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -36,55 +39,22 @@
             tools:layout_editor_absoluteX="26dp" />
     </androidx.appcompat.widget.Toolbar>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <Button
         android:id="@+id/newPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="60dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:onClick="clickFAB"
-        android:src="@drawable/baseline_question_mark_24"
-        app:backgroundTint="@color/red"
-        app:fabSize="normal"
+        android:background="@drawable/new_pass_btn"
+        android:fontFamily="@font/charm"
+        android:textAlignment="viewStart"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:icon="@drawable/baseline_question_mark_24"
+        app:iconGravity="textTop"
+        app:iconPadding="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:maxImageSize="50dp"
-        app:rippleColor="@color/light_red"
-        app:tint="@color/light_yl">
-
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Oncoming events" />
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Past events" />
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </LinearLayout>
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
