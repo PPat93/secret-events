@@ -2,4 +2,5 @@
     <string name="app_name">Events!</string>
     <string name="passphrase_input_hint">Enter passphrase</string>
     <string name="passphrase_title">Add new passphrase</string>
+    <string name="menu_info">Info</string>
 </resources>
