@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView mainEventsList = findViewById(R.id.mainEventsList);
 
         events.add(new Event("Event 1", "Zaułek Wileński 1/29 kraków", R.drawable.testimg));
-        events.add(new Event("Event 2", "Zaułek Wileński 1/29 kraków", R.drawable.testimg2));
-        events.add(new Event("Event 3", "Zaułek Wileński 1/29 kraków", R.drawable.testimg3));
+        events.add(new Event("Event 2", "Cicha 12 kraków", R.drawable.testimg2));
+        events.add(new Event("Event 3", "Bolesława i Marii wysołuchów 14/2 kraków", R.drawable.testimg3));
 
         mainEventsList.setLayoutManager(new LinearLayoutManager(this));
         mainEventsList.setAdapter(new ViewAdapter(getApplicationContext(), events));
