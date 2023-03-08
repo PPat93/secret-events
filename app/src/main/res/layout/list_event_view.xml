@@ -3,18 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="100dp">
 
     <TextView
         android:id="@+id/eventTitle"
-        android:layout_width="275dp"
-        android:layout_height="wrap_content"
+        android:layout_width="199dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/eventTime"
         android:layout_below="@+id/eventAddress"
         android:layout_alignParentStart="true"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
-        android:layout_toStartOf="@+id/eventPicture"
+        android:layout_marginBottom="0dp"
+        android:layout_toStartOf="@+id/eventType"
         android:text="Event Address" />
 
     <View
@@ -26,20 +28,32 @@
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="34dp"
-        android:layout_toStartOf="@+id/eventPicture"
+        android:layout_toStartOf="@+id/eventType"
         android:background="?android:attr/listDivider" />
 
     <TextView
         android:id="@+id/eventAddress"
-        android:layout_width="312dp"
+        android:layout_width="165dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
-        android:layout_toStartOf="@+id/eventPicture"
+        android:layout_toStartOf="@+id/eventType"
         android:text="Event Title" />
+
+    <TextView
+        android:id="@+id/eventTime"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toStartOf="@+id/eventType"
+        android:text="Event Time" />
 
     <ImageView
         android:id="@+id/eventPicture"
@@ -50,5 +64,17 @@
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/eventType"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/eventPicture"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toStartOf="@+id/eventPicture"
+        android:text="Event Type" />
 
 </RelativeLayout>

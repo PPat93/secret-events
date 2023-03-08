@@ -4,6 +4,17 @@ public class Event {
 
     String eventTitle;
     String eventAddress;
+    String eventDescription;
+    String eventTime;
+
+    public enum eventType {
+        Restaurant,
+        Patisserie,
+        Attraction,
+        Event,
+        Sightseeing
+    }
+
     int image;
 
     public Event(String eventTitle, String eventAddress, int image) {
@@ -24,6 +35,14 @@ public class Event {
         this.image = image;
     }
 
+    public void setEventDescription(String eventDescription) {
+        this.eventDescription = eventDescription;
+    }
+
+    public void setEventTime(String eventTime) {
+        this.eventTime = eventTime;
+    }
+
     public String getEventTitle() {
         return eventTitle;
     }
@@ -34,5 +53,13 @@ public class Event {
 
     public int getImage() {
         return image;
+    }
+
+    public String getEventDescription() {
+        return eventDescription;
+    }
+
+    public String getEventTime() {
+        return eventTime;
     }
 }

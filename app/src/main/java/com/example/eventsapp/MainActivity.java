@@ -1,6 +1,8 @@
 package com.example.eventsapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,8 +14,11 @@ import android.widget.Toolbar;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
 
+public class MainActivity extends AppCompatActivity {
+    List<Event> events = new ArrayList<Event>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +30,14 @@ public class MainActivity extends AppCompatActivity {
                 openAddView();
             }
         });
+        RecyclerView mainEventsList = findViewById(R.id.mainEventsList);
+
+        events.add(new Event("Event 1", "Zaułek Wileński 1/29 kraków", R.drawable.testimg));
+        events.add(new Event("Event 2", "Zaułek Wileński 1/29 kraków", R.drawable.testimg2));
+        events.add(new Event("Event 3", "Zaułek Wileński 1/29 kraków", R.drawable.testimg3));
+
+        mainEventsList.setLayoutManager(new LinearLayoutManager(this));
+        mainEventsList.setAdapter(new ViewAdapter(getApplicationContext(), events));
     }
 
     public void openAddView() {
