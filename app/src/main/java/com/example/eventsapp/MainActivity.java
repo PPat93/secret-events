@@ -19,6 +19,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     List<Event> events = new ArrayList<Event>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
 
         mainEventsList.setLayoutManager(new LinearLayoutManager(this));
         mainEventsList.setAdapter(new ViewAdapter(getApplicationContext(), events));
+        Intent intent = getIntent();
+        if (intent.getStringExtra("newPass") != null)
+            events.add(new Event(intent.getStringExtra("newPass"), "Plac bohaterów getta 3, Kraków ", R.drawable.testimg3));
     }
 
     public void openAddView() {

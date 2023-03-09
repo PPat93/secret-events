@@ -1,5 +1,6 @@
 package com.example.eventsapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,7 @@ public class AddView extends AppCompatActivity {
     TextView receivedPass;
 
     private String title = "Added item: ";
+    private String newPassphraseValue = "";
     private String description = "Next stop: ";
     private String image = "";
     //private String hour = TODO
@@ -41,11 +43,14 @@ public class AddView extends AppCompatActivity {
         });
     }
 
-    protected String receiveNewPass() {
+    protected void receiveNewPass() {
         passphraseInput = (EditText) findViewById(R.id.passphraseInput);
         receivedPass = (TextView) findViewById(R.id.receivedTitle);
-        title += passphraseInput.getText().toString();
-        receivedPass.setText(title);
-        return title;
+        newPassphraseValue += passphraseInput.getText().toString();
+        String displayPass = title + newPassphraseValue;
+        receivedPass.setText(displayPass);
+        Intent revealNewPassIntent = new Intent(this, MainActivity.class);
+        revealNewPassIntent.putExtra("newPass", newPassphraseValue);
+        startActivity(revealNewPassIntent);
     }
 }
