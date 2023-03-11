@@ -17,6 +17,7 @@ public class AddView extends AppCompatActivity {
     TextView receivedPass;
 
     private String title = "Added item: ";
+    private Integer confirm = 0;
     private String newPassphraseValue = "";
     private String description = "Next stop: ";
     private String image = "";
@@ -26,7 +27,7 @@ public class AddView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_add);
-
+        confirm = 0;
         cancelButton = findViewById(R.id.cancelButton);
         okButton = findViewById(R.id.okButton);
         cancelButton.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +52,11 @@ public class AddView extends AppCompatActivity {
         receivedPass.setText(displayPass);
         Intent revealNewPassIntent = new Intent(this, MainActivity.class);
         revealNewPassIntent.putExtra("newPass", newPassphraseValue);
-        startActivity(revealNewPassIntent);
+
+        if (confirm == 1) {
+            MainActivity.events.add(new Event(newPassphraseValue, "Plac bohaterów getta 3, Kraków ", R.drawable.testimg3));
+            startActivity(revealNewPassIntent);
+        } else
+            confirm = 1;
     }
 }
