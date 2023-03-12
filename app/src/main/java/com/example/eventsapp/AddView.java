@@ -45,8 +45,8 @@ public class AddView extends AppCompatActivity {
     }
 
     protected void receiveNewPass() {
-        passphraseInput = (EditText) findViewById(R.id.passphraseInput);
-        receivedPass = (TextView) findViewById(R.id.receivedTitle);
+        passphraseInput = findViewById(R.id.passphraseInput);
+        receivedPass =  findViewById(R.id.receivedTitle);
         newPassphraseValue += passphraseInput.getText().toString();
         String displayPass = title + newPassphraseValue;
         receivedPass.setText(displayPass);
