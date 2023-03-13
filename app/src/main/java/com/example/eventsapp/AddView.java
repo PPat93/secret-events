@@ -1,13 +1,18 @@
 package com.example.eventsapp;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.text.HtmlCompat;
 
 public class AddView extends AppCompatActivity {
 
@@ -15,13 +20,11 @@ public class AddView extends AppCompatActivity {
     Button okButton;
     EditText passphraseInput;
     TextView receivedPass;
-
-    private String title = "Added item: ";
+    AlertDialog alertDialog;
+    private String title;
     private Integer confirm = 0;
     private String newPassphraseValue = "";
-    private String description = "Next stop: ";
-    private String image = "";
-    //private String hour = TODO
+    Intent revealNewPassIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,24 +42,45 @@ public class AddView extends AppCompatActivity {
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                receiveNewPass();
+                passphraseInput = findViewById(R.id.passphraseInput);
+                if (!passphraseInput.getText().toString().equals(""))
+                    receiveNewPass();
             }
         });
+
+    }
+
+    protected AlertDialog createAlertDialog(String passphrase) {
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this)
+                .setIcon(R.drawable.baseline_event_24)
+                .setTitle("More fun?")
+                .setMessage(HtmlCompat.fromHtml("Are you sure to add new <b>" + passphrase + "</b> phrase and to have even more fun?", HtmlCompat.FROM_HTML_MODE_LEGACY))
+                .setPositiveButton("YES!", (dialogInterface, i) -> {
+                    Toast.makeText(AddView.this, "WOHOOO! Let's go!", Toast.LENGTH_SHORT).show();
+                    newPassphraseValue = "";
+                    receivedPass.setText("");
+                    startActivity(revealNewPassIntent);
+                })
+                .setNegativeButton("No :(", (dialogInterface, i) -> {
+                    Toast.makeText(AddView.this, "That'sad :(", Toast.LENGTH_SHORT).show();
+                    newPassphraseValue = "";
+                    receivedPass.setText("");
+                });
+
+        return alertDialogBuilder.create();
     }
 
     protected void receiveNewPass() {
+
         passphraseInput = findViewById(R.id.passphraseInput);
-        receivedPass =  findViewById(R.id.receivedTitle);
+        receivedPass = findViewById(R.id.receivedTitle);
         newPassphraseValue += passphraseInput.getText().toString();
-        String displayPass = title + newPassphraseValue;
-        receivedPass.setText(displayPass);
-        Intent revealNewPassIntent = new Intent(this, MainActivity.class);
+        receivedPass.setText(new StringBuilder().append("Password entered: ").append(newPassphraseValue).toString());
+        revealNewPassIntent = new Intent(this, MainActivity.class);
         revealNewPassIntent.putExtra("newPass", newPassphraseValue);
 
-        if (confirm == 1) {
-            MainActivity.events.add(new Event(newPassphraseValue, "Plac bohaterów getta 3, Kraków ", R.drawable.testimg3));
-            startActivity(revealNewPassIntent);
-        } else
-            confirm = 1;
+        alertDialog = createAlertDialog(newPassphraseValue);
+        alertDialog.show();
     }
 }
