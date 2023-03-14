@@ -22,7 +22,6 @@ public class AddView extends AppCompatActivity {
     TextView receivedPass;
     AlertDialog alertDialog;
     private String title;
-    private Integer confirm = 0;
     private String newPassphraseValue = "";
     Intent revealNewPassIntent;
 
@@ -30,7 +29,6 @@ public class AddView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_add);
-        confirm = 0;
         cancelButton = findViewById(R.id.cancelButton);
         okButton = findViewById(R.id.okButton);
         cancelButton.setOnClickListener(new View.OnClickListener() {
@@ -47,7 +45,6 @@ public class AddView extends AppCompatActivity {
                     receiveNewPass();
             }
         });
-
     }
 
     protected AlertDialog createAlertDialog(String passphrase) {
