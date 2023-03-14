@@ -8,7 +8,7 @@ public class DbHelper {
 
     public static void fillDB() {
         MainActivity.eventsDB.execSQL("CREATE TABLE IF NOT EXISTS " +
-                "events(" +
+                "events (" +
                 "id INTEGER PRIMARY KEY, " +
                 "passphrase VARCHAR(100), " +
                 "title VARCHAR(100), " +
