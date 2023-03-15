@@ -1,9 +1,33 @@
 package com.example.eventsapp;
 
+import android.database.Cursor;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class DbHelper {
 
     public DbHelper() {
         super();
+    }
+
+    public static void getFirstRecordOfEvents() {
+
+        List<String> firstItem = new ArrayList<>();
+
+        Cursor c = MainActivity.eventsDB.rawQuery("SELECT * FROM events LIMIT 1", null);
+
+        c.moveToFirst();
+        do {
+            firstItem.add(c.getString(0)); //  id
+            firstItem.add(c.getString(1)); //  passphrase
+            firstItem.add(c.getString(2)); //  title
+            firstItem.add(c.getString(3));//  type
+            firstItem.add(c.getString(4)); //  address
+            firstItem.add(c.getString(5)); //  description
+            firstItem.add(c.getString(6));  //  is_visible
+        } while (c.moveToNext());
+        c.close();
     }
 
     public static void fillDB() {

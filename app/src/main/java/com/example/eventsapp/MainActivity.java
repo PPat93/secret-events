@@ -19,7 +19,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     static List<Event> events = new ArrayList<Event>();
-    static List<String[]> dbRecordsRetrieved = new ArrayList<String[]>();
+    static List<List<String>> dbRecordsRetrieved = new ArrayList<List<String>>();
     static SQLiteDatabase eventsDB;
 
     @Override
@@ -40,28 +40,28 @@ public class MainActivity extends AppCompatActivity {
         createDb();
     }
 
-    public List<String[]> createDb() {
+    public List<List<String>> createDb() {
 
         eventsDB = this.openOrCreateDatabase("eventsDB", Context.MODE_PRIVATE, null);
         DbHelper.fillDB();
         Cursor c = eventsDB.rawQuery("SELECT * FROM events", null);
 
+        List<String> tempEventRecord = new ArrayList<String>();
         c.moveToFirst();
         do {
-            dbRecordsRetrieved.add(new String[]{
-                    c.getString(0), //  id
-                    c.getString(1), //  passphrase
-                    c.getString(2), //  title
-                    c.getString(3), //  type
-                    c.getString(4), //  address
-                    c.getString(5), //  description
-                    c.getString(6)  //  is_visible
-            });
+            tempEventRecord.add(c.getString(0));//  id
+            tempEventRecord.add(c.getString(1));//  passphrase
+            tempEventRecord.add(c.getString(2));//  title
+            tempEventRecord.add(c.getString(3));//  type
+            tempEventRecord.add(c.getString(4));//  address
+            tempEventRecord.add(c.getString(5));//  description
+            tempEventRecord.add(c.getString(6));//  is_visible
+            dbRecordsRetrieved.add(tempEventRecord);
         }
         while (c.moveToNext());
         c.close();
         dbRecordsRetrieved.forEach(item -> {
-            Log.i("yazda", item[6]);
+            Log.i("yazda", item.get(6));
         });
 
         return dbRecordsRetrieved;

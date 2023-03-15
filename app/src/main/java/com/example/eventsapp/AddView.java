@@ -83,11 +83,12 @@ public class AddView extends AppCompatActivity {
         alertDialog.show();
     }
 
+    //  Update visibility of the event whose password was found
     protected void searchAndActivateEventsDbItem(String passphrase) {
 
         MainActivity.dbRecordsRetrieved.forEach(singleRecord -> {
 
-            if (singleRecord[1].equals(passphrase.trim())) {
+            if (singleRecord.get(1).equals(passphrase.trim())) {
                 int currentIndex = MainActivity.dbRecordsRetrieved.indexOf(singleRecord);
                 MainActivity.eventsDB.execSQL("UPDATE events SET is_visible = TRUE WHERE id = " + currentIndex + ";");
             }
