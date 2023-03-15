@@ -19,7 +19,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     static List<Event> events = new ArrayList<Event>();
-    List<String[]> dbColumnIds = new ArrayList<String[]>();
+    static List<String[]> dbRecordsRetrieved = new ArrayList<String[]>();
     static SQLiteDatabase eventsDB;
 
     @Override
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         mainEventsList.setLayoutManager(new LinearLayoutManager(this));
         mainEventsList.setAdapter(new ViewAdapter(getApplicationContext(), events));
         Intent intent = getIntent();
+//        restrict db to get created and filled only once
         createDb();
     }
 
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         c.moveToFirst();
         do {
-            dbColumnIds.add(new String[]{
+            dbRecordsRetrieved.add(new String[]{
                     c.getString(0), //  id
                     c.getString(1), //  passphrase
                     c.getString(2), //  title
@@ -59,12 +60,11 @@ public class MainActivity extends AppCompatActivity {
         }
         while (c.moveToNext());
         c.close();
-        dbColumnIds.forEach(item -> {
-            Log.i("yazda", Arrays.toString(item));
-
+        dbRecordsRetrieved.forEach(item -> {
+            Log.i("yazda", item[6]);
         });
-        return dbColumnIds;
 
+        return dbRecordsRetrieved;
     }
 
     public void openAddView() {

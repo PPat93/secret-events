@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -54,6 +55,7 @@ public class AddView extends AppCompatActivity {
                 .setTitle("More fun?")
                 .setMessage(HtmlCompat.fromHtml("Are you sure to add new <b>" + passphrase + "</b> phrase and to have even more fun?", HtmlCompat.FROM_HTML_MODE_LEGACY))
                 .setPositiveButton("YES!", (dialogInterface, i) -> {
+                    searchAndActivateEventsDbItem(passphrase);
                     Toast.makeText(AddView.this, "WOHOOO! Let's go!", Toast.LENGTH_SHORT).show();
                     newPassphraseValue = "";
                     receivedPass.setText("");
@@ -79,5 +81,16 @@ public class AddView extends AppCompatActivity {
 
         alertDialog = createAlertDialog(newPassphraseValue);
         alertDialog.show();
+    }
+
+    protected void searchAndActivateEventsDbItem(String passphrase) {
+
+        MainActivity.dbRecordsRetrieved.forEach(singleRecord -> {
+
+            if (singleRecord[1].equals(passphrase.trim())) {
+                int currentIndex = MainActivity.dbRecordsRetrieved.indexOf(singleRecord);
+                MainActivity.eventsDB.execSQL("UPDATE events SET is_visible = TRUE WHERE id = " + currentIndex + ";");
+            }
+        });
     }
 }
