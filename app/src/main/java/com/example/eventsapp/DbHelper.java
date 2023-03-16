@@ -43,13 +43,14 @@ public class DbHelper {
                 ")");
         MainActivity.eventsDB.execSQL("INSERT INTO " +
                 "events (passphrase, title, type, address, description, is_visible)" +
-                "VALUES ('passPhr1', 'Title here1', '13', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', 0)");
+                "VALUES ('passPhr1', 'Title here1', '13', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0')");
         MainActivity.eventsDB.execSQL("INSERT INTO " +
                 "events (passphrase, title, type, address, description, is_visible)" +
-                "VALUES ('passPhr2', 'Title here2', '14', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', 0)");
+                "VALUES ('passPhr2', 'Title here2', '14', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0')");
         MainActivity.eventsDB.execSQL("INSERT INTO " +
                 "events (passphrase, title, type, address, description, is_visible)" +
-                "VALUES ('passPhr3', 'Title here3', '15', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', 0)");
+                "VALUES ('passPhr3', 'Title here3', '15', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0')");
+//        MainActivity.eventsDB.execSQL("DROP TABLE events");
     }
 }
 
