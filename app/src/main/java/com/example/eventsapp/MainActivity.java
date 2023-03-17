@@ -44,14 +44,12 @@ public class MainActivity extends AppCompatActivity {
 
     public HashMap<String, List<String>> createDb() {
         // START DEBUG
-//        eventsDB.execSQL("DROP TABLE events");
+//        eventsDB.execSQL("DROP TABLE events;");
         // END DEBUG
 
         eventsDB = this.openOrCreateDatabase("eventsDB", Context.MODE_PRIVATE, null);
 
-//        protection so db is filled only if no data exists in db
-        if (DbHelper.getFirstRecordOfEvents().equals(""))
-            DbHelper.fillDB();
+        DbHelper.fillDB();
 
         Cursor c = eventsDB.rawQuery("SELECT * FROM events", null);
         c.moveToFirst();

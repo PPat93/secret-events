@@ -55,6 +55,7 @@ public class AddView extends AppCompatActivity {
                 .setMessage(HtmlCompat.fromHtml("Are you sure to add new <b>" + passphrase + "</b> phrase and to have even more fun?", HtmlCompat.FROM_HTML_MODE_LEGACY))
                 .setPositiveButton("YES!", (dialogInterface, i) -> {
                     Toast.makeText(AddView.this, "WOHOOO! Let's go!", Toast.LENGTH_SHORT).show();
+                    MainActivity.eventsDB.execSQL("UPDATE events SET is_visible = 1 WHERE passphrase = '" + passphrase.trim() + "';");
                     newPassphraseValue = "";
                     receivedPass.setText("");
                     startActivity(revealNewPassIntent);
@@ -87,20 +88,13 @@ public class AddView extends AppCompatActivity {
         }
     }
 
-    //  Update visibility of the event whose password was found
     protected AtomicBoolean searchAndActivateEventsDbItem(String passphrase) {
-        AtomicBoolean eventFound = new AtomicBoolean(false);
-        //START DEBUG
-        for (int i = 0; i < MainActivity.dbRecordsRetrieved.size(); i++) {
-            Log.i(MainActivity.dbRecordsRetrieved.keySet().toArray()[i].toString(), MainActivity.dbRecordsRetrieved.values().toArray()[i].toString());
-        }
-        // END DEBUG
+//       Retrieved db records are searched for the passphrase that was passed in the AddView input if so,
+//       eventFound variable is set to true, else, it remains false. Also, redundant whitespaces of the
+//       passphrase are removed and the AtomicBoolean is returned
 
-//        Bool item is not updated in db, db holding app variable is updated each time main activity is opend
-        if (MainActivity.dbRecordsRetrieved.containsKey(passphrase.trim())) {
-            MainActivity.eventsDB.execSQL("UPDATE events SET is_visible = 1 WHERE passphrase = '" + passphrase.trim() + "';");
-            eventFound.set(true);
-        }
+        AtomicBoolean eventFound = new AtomicBoolean(false);
+        eventFound.set(MainActivity.dbRecordsRetrieved.containsKey(passphrase.trim()));
         return eventFound;
     }
 }
