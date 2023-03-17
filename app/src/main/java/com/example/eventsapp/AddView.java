@@ -3,6 +3,7 @@ package com.example.eventsapp;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -89,15 +90,17 @@ public class AddView extends AppCompatActivity {
     //  Update visibility of the event whose password was found
     protected AtomicBoolean searchAndActivateEventsDbItem(String passphrase) {
         AtomicBoolean eventFound = new AtomicBoolean(false);
+        //START DEBUG
+        for (int i = 0; i < MainActivity.dbRecordsRetrieved.size(); i++) {
+            Log.i(MainActivity.dbRecordsRetrieved.keySet().toArray()[i].toString(), MainActivity.dbRecordsRetrieved.values().toArray()[i].toString());
+        }
+        // END DEBUG
 
-        MainActivity.dbRecordsRetrieved.forEach(singleEvent -> {
-
-            if (singleEvent.get(1).equals(passphrase.trim())) {
-                int currentIndex = MainActivity.dbRecordsRetrieved.indexOf(singleEvent);
-                MainActivity.eventsDB.execSQL("UPDATE events SET is_visible = TRUE WHERE id = " + currentIndex + ";");
-                eventFound.set(true);
-            }
-        });
+//        Bool item is not updated in db, db holding app variable is updated each time main activity is opend
+        if (MainActivity.dbRecordsRetrieved.containsKey(passphrase.trim())) {
+            MainActivity.eventsDB.execSQL("UPDATE events SET is_visible = 1 WHERE passphrase = '" + passphrase.trim() + "';");
+            eventFound.set(true);
+        }
         return eventFound;
     }
 }
