@@ -33,11 +33,11 @@ public class DbHelper {
                 "is_visible BOOLEAN" +
                 ")");
 
-        Log.i("wypeelnijbefore", String.valueOf(getFirstRecordOfEvents()));
-
 //        protection so db is filled only if no data exists in db
         if (getFirstRecordOfEvents() == 0) {
-            Log.i("wypeelnijpo", String.valueOf(getFirstRecordOfEvents()));
+            MainActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('Tutorial', 'This is event title!', '13', 'Here, the address will be shown', 'Short description about the event will be here', '1')");
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('passPhr1', 'Title here1', '13', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0')");

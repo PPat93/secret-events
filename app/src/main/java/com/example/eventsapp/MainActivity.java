@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
     static List<Event> events = new ArrayList<Event>();
@@ -32,14 +33,20 @@ public class MainActivity extends AppCompatActivity {
         FloatingActionButton addPassFab = findViewById(R.id.newPass);
         addPassFab.setOnClickListener(view -> openAddView());
 
+//        Method creating and filling DB
+        createDb();
+
 //      Event list displayment
+        events = new ArrayList<Event>();
+        dbRecordsRetrieved.forEach((key, value) -> {
+            if (Objects.equals(value.get(value.size() - 1), "1")) {
+                events.add(new Event(value.get(0), value.get(2), Integer.parseInt(value.get(1))));
+            }
+        });
         RecyclerView mainEventsList = findViewById(R.id.mainEventsList);
         mainEventsList.setLayoutManager(new LinearLayoutManager(this));
         mainEventsList.setAdapter(new ViewAdapter(getApplicationContext(), events));
         Intent intent = getIntent();
-
-//        Method creating and filling DB
-        createDb();
     }
 
     public HashMap<String, List<String>> createDb() {
