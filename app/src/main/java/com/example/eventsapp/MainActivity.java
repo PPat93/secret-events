@@ -15,11 +15,12 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     static List<Event> events = new ArrayList<Event>();
-    List<String[]> dbColumnIds = new ArrayList<String[]>();
+    static HashMap<String, List<String>> dbRecordsRetrieved = new HashMap<String, List<String>>();
     static SQLiteDatabase eventsDB;
 
     @Override
@@ -36,35 +37,45 @@ public class MainActivity extends AppCompatActivity {
         mainEventsList.setLayoutManager(new LinearLayoutManager(this));
         mainEventsList.setAdapter(new ViewAdapter(getApplicationContext(), events));
         Intent intent = getIntent();
+
+//        Method creating and filling DB
         createDb();
     }
 
-    public List<String[]> createDb() {
+    public HashMap<String, List<String>> createDb() {
+        // START DEBUG
+//        eventsDB.execSQL("DROP TABLE events;");
+        // END DEBUG
 
         eventsDB = this.openOrCreateDatabase("eventsDB", Context.MODE_PRIVATE, null);
-        DbHelper.fillDB();
-        Cursor c = eventsDB.rawQuery("SELECT * FROM events", null);
 
+        DbHelper.fillDB();
+
+        Cursor c = eventsDB.rawQuery("SELECT * FROM events", null);
         c.moveToFirst();
+
+//      create and rearrange retrieved db records
         do {
-            dbColumnIds.add(new String[]{
-                    c.getString(0), //  id
-                    c.getString(1), //  passphrase
-                    c.getString(2), //  title
-                    c.getString(3), //  type
-                    c.getString(4), //  address
-                    c.getString(5), //  description
-                    c.getString(6)  //  is_visible
-            });
+//      below is - {id, title, type, address, description, is_visible}
+            List<String> tempEventRecord = new ArrayList<String>();
+            tempEventRecord.add(c.getString(1));//  title
+            tempEventRecord.add(c.getString(2));//  type
+            tempEventRecord.add(c.getString(3));//  address
+            tempEventRecord.add(c.getString(4));//  description
+            tempEventRecord.add(c.getString(5));//  is_visible
+
+//          below is - key: passphrase, value: List<String>
+            dbRecordsRetrieved.put(c.getString(0), tempEventRecord);
         }
         while (c.moveToNext());
         c.close();
-        dbColumnIds.forEach(item -> {
-            Log.i("yazda", Arrays.toString(item));
 
+        // START DEBUG
+        dbRecordsRetrieved.forEach((key, value) -> {
+            Log.i(key, value.toString());
         });
-        return dbColumnIds;
-
+        // END DEBUG
+        return dbRecordsRetrieved;
     }
 
     public void openAddView() {

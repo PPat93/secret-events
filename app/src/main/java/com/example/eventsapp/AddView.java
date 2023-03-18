@@ -1,10 +1,9 @@
 package com.example.eventsapp;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +13,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
 
+import java.util.concurrent.atomic.AtomicBoolean;
+
 public class AddView extends AppCompatActivity {
 
     Button cancelButton;
@@ -21,7 +22,6 @@ public class AddView extends AppCompatActivity {
     EditText passphraseInput;
     TextView receivedPass;
     AlertDialog alertDialog;
-    private String title;
     private String newPassphraseValue = "";
     Intent revealNewPassIntent;
 
@@ -55,6 +55,7 @@ public class AddView extends AppCompatActivity {
                 .setMessage(HtmlCompat.fromHtml("Are you sure to add new <b>" + passphrase + "</b> phrase and to have even more fun?", HtmlCompat.FROM_HTML_MODE_LEGACY))
                 .setPositiveButton("YES!", (dialogInterface, i) -> {
                     Toast.makeText(AddView.this, "WOHOOO! Let's go!", Toast.LENGTH_SHORT).show();
+                    MainActivity.eventsDB.execSQL("UPDATE events SET is_visible = 1 WHERE passphrase = '" + passphrase.trim() + "';");
                     newPassphraseValue = "";
                     receivedPass.setText("");
                     startActivity(revealNewPassIntent);
@@ -78,6 +79,22 @@ public class AddView extends AppCompatActivity {
         revealNewPassIntent.putExtra("newPass", newPassphraseValue);
 
         alertDialog = createAlertDialog(newPassphraseValue);
-        alertDialog.show();
+        AtomicBoolean isEventFound = searchAndActivateEventsDbItem(newPassphraseValue);
+        if (isEventFound.get())
+            alertDialog.show();
+        else {
+            newPassphraseValue = "";
+            receivedPass.setText("");
+        }
+    }
+
+    protected AtomicBoolean searchAndActivateEventsDbItem(String passphrase) {
+//       Retrieved db records are searched for the passphrase that was passed in the AddView input if so,
+//       eventFound variable is set to true, else, it remains false. Also, redundant whitespaces of the
+//       passphrase are removed and the AtomicBoolean is returned
+
+        AtomicBoolean eventFound = new AtomicBoolean(false);
+        eventFound.set(MainActivity.dbRecordsRetrieved.containsKey(passphrase.trim()));
+        return eventFound;
     }
 }
