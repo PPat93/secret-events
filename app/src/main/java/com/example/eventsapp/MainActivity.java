@@ -1,6 +1,7 @@
 package com.example.eventsapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
 
 //      Open add pass view
         FloatingActionButton addPassFab = findViewById(R.id.newPass);
@@ -39,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
 //      Event list displayment
         events = new ArrayList<Event>();
         dbRecordsRetrieved.forEach((key, value) -> {
-            if (Objects.equals(value.get(value.size() - 1), "1")) {
-                events.add(new Event(value.get(0), value.get(2), Integer.parseInt(value.get(1))));
+            if (Objects.equals(value.get(4), "1")) {
+                events.add(new Event(value.get(0), value.get(2), value.get(5), Integer.parseInt(value.get(1))));
             }
         });
         RecyclerView mainEventsList = findViewById(R.id.mainEventsList);
@@ -50,9 +52,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public HashMap<String, List<String>> createDb() {
-        // START DEBUG
-//        eventsDB.execSQL("DROP TABLE events;");
-        // END DEBUG
 
         eventsDB = this.openOrCreateDatabase("eventsDB", Context.MODE_PRIVATE, null);
 
@@ -70,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
             tempEventRecord.add(c.getString(3));//  address
             tempEventRecord.add(c.getString(4));//  description
             tempEventRecord.add(c.getString(5));//  is_visible
+            tempEventRecord.add(c.getString(6));//  hour
+            tempEventRecord.add(c.getString(7));//  image_name
 
 //          below is - key: passphrase, value: List<String>
             dbRecordsRetrieved.put(c.getString(0), tempEventRecord);

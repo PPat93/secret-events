@@ -12,14 +12,16 @@ public class Event {
         Patisserie,
         Attraction,
         Event,
-        Sightseeing
+        Sightseeing,
+        Flight
     }
 
     int image;
 
-    public Event(String eventTitle, String eventAddress, int image) {
+    public Event(String eventTitle, String eventAddress, String eventTime, int image) {
         this.eventTitle = eventTitle;
         this.eventAddress = eventAddress;
+        this.eventTime = eventTime;
         this.image = image;
     }
 

@@ -29,7 +29,13 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.eventTitle.setText((events.get(position).getEventTitle()));
         holder.eventAddress.setText((events.get(position).getEventAddress()));
-        holder.eventPicture.setImageResource((events.get(position).getImage()));
+        holder.eventTime.setText((events.get(position).getEventTime()));
+        holder.eventTypeIcon.setImageResource(R.drawable.icon_pattisserie_24);
+
+//        static icons for each recycler item below
+        holder.eventTitleIcon.setImageResource(R.drawable.baseline_outlined_flag_24);
+        holder.eventAddressIcon.setImageResource(R.drawable.baseline_location_on_24);
+        holder.eventTimeIcon.setImageResource(R.drawable.baseline_access_time_24);
     }
 
     @Override
