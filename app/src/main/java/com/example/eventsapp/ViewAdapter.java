@@ -1,6 +1,9 @@
 package com.example.eventsapp;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -30,7 +33,7 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewHolder> {
         holder.eventTitle.setText((events.get(position).getEventTitle()));
         holder.eventAddress.setText((events.get(position).getEventAddress()));
         holder.eventTime.setText((events.get(position).getEventTime()));
-        holder.eventTypeIcon.setImageResource(R.drawable.icon_pattisserie_24);
+        holder.eventTypeIcon.setImageResource(MainActivity.getEventsHashmap(events.get(position).getEventType()));
 
 //        static icons for each recycler item below
         holder.eventTitleIcon.setImageResource(R.drawable.baseline_outlined_flag_24);
