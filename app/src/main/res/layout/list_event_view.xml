@@ -16,7 +16,8 @@
         android:layout_marginEnd="0dp"
         android:layout_toStartOf="@+id/dividerHorizontal1"
         android:layout_toEndOf="@+id/eventTitleIcon"
-        android:text="Event Title" />
+        android:text="Event Title"
+        android:textStyle="bold" />
 
     <View
         android:id="@+id/divider"
@@ -90,7 +91,8 @@
         android:layout_marginBottom="0dp"
         android:layout_toStartOf="@+id/dividerHorizontal1"
         android:layout_toEndOf="@+id/eventTimeIcon"
-        android:text="Event Time" />
+        android:text="Event Time"
+        android:textStyle="italic" />
 
     <View
         android:id="@+id/dividerHorizontal1"
@@ -114,9 +116,9 @@
         android:layout_height="100dp"
         android:layout_alignBottom="@+id/eventPicture"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="25dp"
         android:layout_toStartOf="@+id/dividerHorizontal2"
         app:srcCompat="@drawable/icon_pattisserie_24" />
 
