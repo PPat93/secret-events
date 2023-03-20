@@ -5,15 +5,15 @@ public class Event {
     String eventTitle;
     String eventAddress;
     String eventDescription;
-    String eventTime, eventType;
+    String eventTime, eventType, eventPicture;
 
-    int image;
 
-    public Event(String eventTitle, String eventAddress, String eventTime, String eventType) {
+    public Event(String eventTitle, String eventAddress, String eventTime, String eventType, String eventPicture) {
         this.eventTitle = eventTitle;
         this.eventAddress = eventAddress;
         this.eventTime = eventTime;
         this.eventType = eventType;
+        this.eventPicture = eventPicture;
     }
 
     public void setEventTitle(String eventTitle) {
@@ -24,16 +24,16 @@ public class Event {
         this.eventAddress = eventAddress;
     }
 
-    public void setImage(int image) {
-        this.image = image;
-    }
-
     public void setEventDescription(String eventDescription) {
         this.eventDescription = eventDescription;
     }
 
     public void setEventTime(String eventTime) {
         this.eventTime = eventTime;
+    }
+
+    public String getEventDescription() {
+        return eventDescription;
     }
 
     public String getEventTitle() {
@@ -44,18 +44,16 @@ public class Event {
         return eventAddress;
     }
 
-    public int getImage() {
-        return image;
-    }
-
-    public String getEventDescription() {
-        return eventDescription;
-    }
 
     public String getEventTime() {
         return eventTime;
     }
+
     public String getEventType() {
         return eventType;
+    }
+
+    public String getEventPicture() {
+        return eventPicture;
     }
 }

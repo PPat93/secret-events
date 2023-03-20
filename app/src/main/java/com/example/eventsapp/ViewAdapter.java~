@@ -34,7 +34,7 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewHolder> {
         holder.eventAddress.setText((events.get(position).getEventAddress()));
         holder.eventTime.setText((events.get(position).getEventTime()));
         holder.eventTypeIcon.setImageResource(Shared.getEventTypesHashmap(events.get(position).getEventType()));
-        holder.eventPicture.setImageResource(Shared.getEventImagesMap(events.get(position).getEventPicture()));
+//        holder.eventPicture.setImageResource(Shared.getEventImagesMap(events.get(position).getEventPicture()));
 
 //        static icons for each recycler item below
         holder.eventTitleIcon.setImageResource(R.drawable.baseline_outlined_flag_24);

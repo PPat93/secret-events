@@ -24,26 +24,15 @@ public class MainActivity extends AppCompatActivity {
     static List<Event> events = new ArrayList<Event>();
     static HashMap<String, List<String>> dbRecordsRetrieved = new HashMap<String, List<String>>();
     static SQLiteDatabase eventsDB;
-    public static HashMap<String, Integer> eventTypesMap = new HashMap<String, Integer>();
-
-    public void setEventsHashmap(){
-        eventTypesMap.put("Restaurant", R.drawable.icon_restaurant_24);
-        eventTypesMap.put("Patisserie", R.drawable.icon_pattisserie_24);
-        eventTypesMap.put("Attraction", R.drawable.icon_attraction_24);
-        eventTypesMap.put("Event", R.drawable.icon_event_24);
-        eventTypesMap.put("Sightseeing", R.drawable.icon_sightseeing_24);
-        eventTypesMap.put("Flight", R.drawable.icon_flight_24);
-    }
-
-    public static Integer getEventsHashmap(String hashKey) {
-        return eventTypesMap.get(hashKey);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setEventsHashmap();
+
+//        setting event type icons and images drawables for recycler view
+        Shared.setEventTypesHashmap();
+        Shared.setEventImagesMap();
 
 
 //      Open add pass view
@@ -57,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         events = new ArrayList<Event>();
         dbRecordsRetrieved.forEach((key, value) -> {
             if (Objects.equals(value.get(4), "1")) {
-                events.add(new Event(value.get(0), value.get(2), value.get(5), value.get(1)));
+                events.add(new Event(value.get(0), value.get(2), value.get(5), value.get(1), value.get(6)));
             }
         });
         RecyclerView mainEventsList = findViewById(R.id.mainEventsList);
