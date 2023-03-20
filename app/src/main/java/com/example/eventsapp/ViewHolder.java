@@ -9,14 +9,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class ViewHolder extends RecyclerView.ViewHolder {
 
-    TextView eventTitle, eventAddress;
-    ImageView eventPicture;
+    TextView eventTitle, eventAddress, eventTime;
+    ImageView eventTypeIcon, eventTitleIcon, eventAddressIcon, eventTimeIcon, eventPicture;
 
     public ViewHolder(@NonNull View itemView) {
         super(itemView);
 
         eventTitle = itemView.findViewById(R.id.eventTitle);
         eventAddress = itemView.findViewById(R.id.eventAddress);
+        eventTime = itemView.findViewById(R.id.eventTime);
+        eventTypeIcon = itemView.findViewById(R.id.eventTypeIcon);
         eventPicture = itemView.findViewById(R.id.eventPicture);
+
+        eventTitleIcon = itemView.findViewById(R.id.eventTitleIcon);
+        eventAddressIcon = itemView.findViewById(R.id.eventAddressIcon);
+        eventTimeIcon = itemView.findViewById(R.id.eventTimeIcon);
     }
 }

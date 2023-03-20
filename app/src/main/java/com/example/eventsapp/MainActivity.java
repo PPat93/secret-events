@@ -1,6 +1,7 @@
 package com.example.eventsapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
     static List<Event> events = new ArrayList<Event>();
@@ -28,24 +30,32 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        setting event type icons and images drawables for recycler view
+        Shared.setEventTypesHashmap();
+        Shared.setEventImagesMap();
+
+
 //      Open add pass view
         FloatingActionButton addPassFab = findViewById(R.id.newPass);
         addPassFab.setOnClickListener(view -> openAddView());
 
+//        Method creating and filling DB
+        createDb();
+
 //      Event list displayment
+        events = new ArrayList<Event>();
+        dbRecordsRetrieved.forEach((key, value) -> {
+            if (Objects.equals(value.get(4), "1")) {
+                events.add(new Event(value.get(0), value.get(2), value.get(5), value.get(1), value.get(6)));
+            }
+        });
         RecyclerView mainEventsList = findViewById(R.id.mainEventsList);
         mainEventsList.setLayoutManager(new LinearLayoutManager(this));
         mainEventsList.setAdapter(new ViewAdapter(getApplicationContext(), events));
         Intent intent = getIntent();
-
-//        Method creating and filling DB
-        createDb();
     }
 
     public HashMap<String, List<String>> createDb() {
-        // START DEBUG
-//        eventsDB.execSQL("DROP TABLE events;");
-        // END DEBUG
 
         eventsDB = this.openOrCreateDatabase("eventsDB", Context.MODE_PRIVATE, null);
 
@@ -63,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
             tempEventRecord.add(c.getString(3));//  address
             tempEventRecord.add(c.getString(4));//  description
             tempEventRecord.add(c.getString(5));//  is_visible
+            tempEventRecord.add(c.getString(6));//  hour
+            tempEventRecord.add(c.getString(7));//  image_name
 
 //          below is - key: passphrase, value: List<String>
             dbRecordsRetrieved.put(c.getString(0), tempEventRecord);

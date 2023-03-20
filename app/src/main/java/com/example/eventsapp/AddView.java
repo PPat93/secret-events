@@ -76,7 +76,6 @@ public class AddView extends AppCompatActivity {
         newPassphraseValue += passphraseInput.getText().toString();
         receivedPass.setText(new StringBuilder().append("Password entered: ").append(newPassphraseValue).toString());
         revealNewPassIntent = new Intent(this, MainActivity.class);
-        revealNewPassIntent.putExtra("newPass", newPassphraseValue);
 
         alertDialog = createAlertDialog(newPassphraseValue);
         AtomicBoolean isEventFound = searchAndActivateEventsDbItem(newPassphraseValue);

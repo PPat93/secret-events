@@ -3,57 +3,122 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="100dp">
+    android:layout_height="103dp"
+    android:background="@color/background">
 
     <TextView
         android:id="@+id/eventTitle"
-        android:layout_width="199dp"
-        android:layout_height="40dp"
-        android:layout_above="@+id/eventTime"
-        android:layout_below="@+id/eventAddress"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="0dp"
-        android:layout_toStartOf="@+id/eventType"
-        android:text="Event Address" />
-
-    <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_above="@+id/eventTitle"
-        android:layout_below="@+id/eventAddress"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="34dp"
-        android:layout_toStartOf="@+id/eventType"
-        android:background="?android:attr/listDivider" />
-
-    <TextView
-        android:id="@+id/eventAddress"
         android:layout_width="165dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
-        android:layout_toStartOf="@+id/eventType"
+        android:layout_toStartOf="@+id/dividerHorizontal1"
+        android:layout_toEndOf="@+id/eventTitleIcon"
         android:text="Event Title" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@+id/eventTitle"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_toStartOf="@+id/eventTypeIcon"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/eventAddress"
+        android:layout_width="149dp"
+        android:layout_height="53dp"
+        android:layout_above="@+id/divider2"
+        android:layout_below="@+id/divider"
+        android:layout_alignStart="@+id/eventTime"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toStartOf="@+id/dividerHorizontal1"
+        android:text="Event Address" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_above="@+id/eventTime"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toStartOf="@+id/eventTypeIcon"
+        android:background="?android:attr/listDivider" />
+
+    <ImageView
+        android:id="@+id/eventAddressIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_above="@+id/divider2"
+        android:layout_alignTop="@+id/eventAddress"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="42dp"
+        tools:srcCompat="@drawable/baseline_location_on_24" />
+
+    <ImageView
+        android:id="@+id/eventTitleIcon"
+        android:layout_width="24dp"
+        android:layout_height="15dp"
+        android:layout_above="@+id/divider"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        tools:srcCompat="@drawable/baseline_outlined_flag_24" />
 
     <TextView
         android:id="@+id/eventTime"
         android:layout_width="165dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
-        android:layout_toStartOf="@+id/eventType"
+        android:layout_toStartOf="@+id/dividerHorizontal1"
+        android:layout_toEndOf="@+id/eventTimeIcon"
         android:text="Event Time" />
+
+    <View
+        android:id="@+id/dividerHorizontal1"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="0dp"
+        android:layout_toStartOf="@+id/eventTypeIcon"
+        android:background="?android:attr/listDivider" />
+
+    <View
+        android:id="@+id/dividerHorizontal2"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="0dp"
+        android:layout_toStartOf="@+id/eventPicture"
+        android:background="?android:attr/listDivider" />
+
+    <ImageView
+        android:id="@+id/eventTypeIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/eventPicture"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toStartOf="@+id/dividerHorizontal2"
+        app:srcCompat="@drawable/icon_pattisserie_24" />
 
     <ImageView
         android:id="@+id/eventPicture"
@@ -62,19 +127,28 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_marginEnd="0dp" />
 
-    <TextView
-        android:id="@+id/eventType"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignBottom="@+id/eventPicture"
-        android:layout_alignParentTop="true"
+    <ImageView
+        android:id="@+id/eventTimeIcon"
+        android:layout_width="24dp"
+        android:layout_height="15dp"
+        android:layout_below="@+id/divider2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="1dp"
+        tools:srcCompat="@drawable/baseline_access_time_24" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
         android:layout_marginBottom="0dp"
-        android:layout_toStartOf="@+id/eventPicture"
-        android:text="Event Type" />
+        android:background="?android:attr/listDivider" />
 
 </RelativeLayout>
