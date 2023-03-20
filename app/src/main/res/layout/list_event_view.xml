@@ -20,19 +20,19 @@
 
     <View
         android:id="@+id/divider"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_below="@+id/eventTitle"
         android:layout_alignParentStart="true"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
-        android:layout_toStartOf="@+id/eventTypeIcon"
+        android:layout_toStartOf="@+id/dividerHorizontal1"
         android:background="?android:attr/listDivider" />
 
     <TextView
         android:id="@+id/eventAddress"
-        android:layout_width="149dp"
+        android:layout_width="match_parent"
         android:layout_height="53dp"
         android:layout_above="@+id/divider2"
         android:layout_below="@+id/divider"
@@ -53,7 +53,7 @@
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
-        android:layout_toStartOf="@+id/eventTypeIcon"
+        android:layout_toStartOf="@+id/dividerHorizontal1"
         android:background="?android:attr/listDivider" />
 
     <ImageView
@@ -82,7 +82,7 @@
 
     <TextView
         android:id="@+id/eventTime"
-        android:layout_width="165dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
@@ -110,13 +110,13 @@
 
     <ImageView
         android:id="@+id/eventTypeIcon"
-        android:layout_width="100dp"
+        android:layout_width="80dp"
         android:layout_height="100dp"
         android:layout_alignBottom="@+id/eventPicture"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginBottom="30dp"
         android:layout_toStartOf="@+id/dividerHorizontal2"
         app:srcCompat="@drawable/icon_pattisserie_24" />
 
