@@ -1,19 +1,18 @@
 package com.example.eventsapp;
 
+import static java.lang.Integer.parseInt;
+
 public class Event {
 
-    String eventTitle;
-    String eventAddress;
-    String eventDescription;
-    String eventTime, eventType, eventPicture;
+    String eventTitle, eventAddress, eventTime, eventType, eventPicture, order_number, event_description;
 
-
-    public Event(String eventTitle, String eventAddress, String eventTime, String eventType, String eventPicture) {
+    public Event(String eventTitle, String eventAddress, String eventTime, String eventType, String eventPicture, String order_number) {
         this.eventTitle = eventTitle;
         this.eventAddress = eventAddress;
         this.eventTime = eventTime;
         this.eventType = eventType;
         this.eventPicture = eventPicture;
+        this.order_number = order_number;
     }
 
     public void setEventTitle(String eventTitle) {
@@ -24,16 +23,16 @@ public class Event {
         this.eventAddress = eventAddress;
     }
 
-    public void setEventDescription(String eventDescription) {
-        this.eventDescription = eventDescription;
+    public void setevent_description(String event_description) {
+        this.event_description = event_description;
     }
 
     public void setEventTime(String eventTime) {
         this.eventTime = eventTime;
     }
 
-    public String getEventDescription() {
-        return eventDescription;
+    public String getevent_description() {
+        return event_description;
     }
 
     public String getEventTitle() {
@@ -55,5 +54,9 @@ public class Event {
 
     public String getEventPicture() {
         return eventPicture;
+    }
+
+    public int getOrderNumber() {
+        return parseInt(order_number);
     }
 }

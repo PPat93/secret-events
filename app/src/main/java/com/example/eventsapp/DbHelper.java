@@ -32,50 +32,54 @@ public class DbHelper {
                 "description VARCHAR(255), " +
                 "is_visible BOOLEAN, " +
                 "hour VARCHAR(10), " +
-                "image_name VARCHAR(20)" +
+                "image_name VARCHAR(20), " +
+//                order_number it is a string, so List format can be easier to maintain - it is List<String, List<String>>
+//                instead of more complicated List<String, List<SomeObjectWithStringAndInt>>
+                "order_number VARCHAR(3)" +
                 ")");
 
 //        protection so db is filled only if no data exists in db
         if (getFirstRecordOfEvents() == 0) {
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('Tutorial', 'This is event title!', 'Restaurant', 'Here, the address will be shown', 'Short description about the event will be here', '1', '16:00', 'testimg')");
+                    "VALUES ('Tutorial', 'Tutaj pojawią się tytuły', 'Restaurant', 'Tutaj będzie dokładny adres miejsca', 'To jest krótki opis aktywności która na nas czeka.', '0', 'Dzień i godzina', 'example', '1')");
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('1', 'Title here1', 'Restaurant', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '1', '12:00', 'testimg')");
+                    "VALUES ('2', 'Second', 'Attraction', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', 'Monday 08:00', 'testimg', '2')");
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('2', 'Title here2', 'Patisserie', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '1', '01:00', 'testimg2')");
+                    "VALUES ('3', 'TThird', 'Patisserie', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', 'Tuesday 01:00', 'testimg2', '3')");
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('3', 'Title here3', 'Attraction', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '1', '08:00', 'testimg')");
+                    "VALUES ('4', 'Fourth', 'Restaurant', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', ' Friday 12:00', 'testimg', '4')");
+
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('4', 'Title here1', 'Event', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '1', '11:00', 'testimg')");
+                    "VALUES ('5', 'fifth', 'Event', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', 'Friday 11:00', 'testimg', '5')");
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('5', 'Title here2', 'Sightseeing', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '1', '10:00', 'testimg')");
+                    "VALUES ('6', 'Sixth', 'Sightseeing', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '10:00', 'testimg', '6')");
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('6', 'Title here3', 'Sightseeing', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '1', '12:00', 'testimg')");
+                    "VALUES ('passPhr3', 'Seventh', 'Sightseeing', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg', '7')");
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('7', 'Title here1', 'Sightseeing', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '1', '14:00', 'testimg')");
+                    "VALUES ('8', 'Eight', 'Sightseeing', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '14:00', 'testimg', '8')");
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('8', 'Title here2', 'Event', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '1', '12:00', 'testimg')");
+                    "VALUES ('passPhr4', 'Ninth', 'Event', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg', '9')");
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('passPhr3', 'Title here3', 'Flight', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg3')");
+                    "VALUES ('10', 'Tenth', 'Flight', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg3', '10')");
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('passPhr2', 'Title here1', 'Patisserie', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg3')");
+                    "VALUES ('11', 'eleven', 'Patisserie', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg3', '11')");
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('passPhr1', 'Title here2', 'Attraction', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg3')");
+                    "VALUES ('12', 'Twelveth', 'Attraction', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg3', '12')");
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('9', 'Title here3', 'Attraction', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '1', '15:00', 'testimg')");
+                    "VALUES ('13', 'Thirteenth', 'Attraction', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '15:00', 'testimg', '13')");
         }
     }
 }
