@@ -52,7 +52,6 @@ public class DbHelper {
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('4', 'Fourth', 'Restaurant', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', ' Friday 12:00', 'testimg', '4')");
-
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('5', 'fifth', 'Event', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', 'Friday 11:00', 'testimg', '5')");
