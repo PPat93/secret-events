@@ -1,7 +1,6 @@
 package com.example.eventsapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -15,7 +14,8 @@ import android.util.Log;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
@@ -46,13 +46,23 @@ public class MainActivity extends AppCompatActivity {
         events = new ArrayList<Event>();
         dbRecordsRetrieved.forEach((key, value) -> {
             if (Objects.equals(value.get(4), "1")) {
-                events.add(new Event(value.get(0), value.get(2), value.get(5), value.get(1), value.get(6)));
+                events.add(new Event(value.get(0), value.get(2), value.get(5), value.get(1), value.get(6), value.get(7)));
             }
         });
+
+//        Sort events object, so Recycler View will show items in correct order. It is sorted by additional order_name value from
+//        the order_name column added in DB.
+        Collections.sort(events, new Comparator<Event>() {
+            @Override
+            public int compare(final Event event1, final Event event2) {
+                return event2.getOrderNumber() - event1.getOrderNumber();
+            }
+        });
+
+//        Attach recycler data to layout item
         RecyclerView mainEventsList = findViewById(R.id.mainEventsList);
-        mainEventsList.setLayoutManager(new LinearLayoutManager(this));
+        mainEventsList.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         mainEventsList.setAdapter(new ViewAdapter(getApplicationContext(), events));
-        Intent intent = getIntent();
     }
 
     public HashMap<String, List<String>> createDb() {
@@ -66,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
 
 //      create and rearrange retrieved db records
         do {
-//      below is - {id, title, type, address, description, is_visible}
             List<String> tempEventRecord = new ArrayList<String>();
             tempEventRecord.add(c.getString(1));//  title
             tempEventRecord.add(c.getString(2));//  type
@@ -75,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
             tempEventRecord.add(c.getString(5));//  is_visible
             tempEventRecord.add(c.getString(6));//  hour
             tempEventRecord.add(c.getString(7));//  image_name
+            tempEventRecord.add(c.getString(8));//  order_number
 
 //          below is - key: passphrase, value: List<String>
             dbRecordsRetrieved.put(c.getString(0), tempEventRecord);
