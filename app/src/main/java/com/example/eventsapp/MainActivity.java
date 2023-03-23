@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         events = new ArrayList<Event>();
         dbRecordsRetrieved.forEach((key, value) -> {
             if (Objects.equals(value.get(4), "1")) {
-                events.add(new Event(value.get(0), value.get(2), value.get(5), value.get(1), value.get(6), value.get(7)));
+                events.add(new Event(value.get(0), value.get(2), value.get(5), value.get(1), value.get(6), value.get(7), key));
             }
         });
 
