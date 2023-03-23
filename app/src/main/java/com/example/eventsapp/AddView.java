@@ -55,7 +55,7 @@ public class AddView extends AppCompatActivity {
                 .setMessage(HtmlCompat.fromHtml("Are you sure to add new <b>" + passphrase + "</b> phrase and to have even more fun?", HtmlCompat.FROM_HTML_MODE_LEGACY))
                 .setPositiveButton("YES!", (dialogInterface, i) -> {
                     Toast.makeText(AddView.this, "WOHOOO! Let's go!", Toast.LENGTH_SHORT).show();
-                    MainActivity.eventsDB.execSQL("UPDATE events SET is_visible = 1 WHERE passphrase = '" + passphrase.trim() + "';");
+                    MainActivity.eventsDB.execSQL("UPDATE events SET is_visible = 1 WHERE passphrase = '" + passphrase.trim().toLowerCase() + "';");
                     newPassphraseValue = "";
                     receivedPass.setText("");
                     startActivity(revealNewPassIntent);
@@ -93,7 +93,7 @@ public class AddView extends AppCompatActivity {
 //       passphrase are removed and the AtomicBoolean is returned
 
         AtomicBoolean eventFound = new AtomicBoolean(false);
-        eventFound.set(MainActivity.dbRecordsRetrieved.containsKey(passphrase.trim()));
+        eventFound.set(MainActivity.dbRecordsRetrieved.containsKey(passphrase.trim().toLowerCase()));
         return eventFound;
     }
 }

@@ -59,6 +59,7 @@
                     android:layout_marginEnd="0dp"
                     android:layout_weight="0.75"
                     android:text="Event Title"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -112,6 +113,7 @@
                     android:layout_marginEnd="0dp"
                     android:layout_weight="0.75"
                     android:text="Event Type"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -148,6 +150,7 @@
                     android:layout_marginEnd="0dp"
                     android:layout_weight="0.75"
                     android:text="Event Address"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -184,6 +187,7 @@
                     android:layout_marginBottom="0dp"
                     android:layout_weight=".75"
                     android:text="Event Time"
+                    android:textSize="18sp"
                     android:textStyle="italic" />
 
             </LinearLayout>
@@ -214,7 +218,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.75"
-                    android:text="Event Description" />
+                    android:text="Event Description"
+                    android:textSize="18sp" />
 
             </LinearLayout>
 
