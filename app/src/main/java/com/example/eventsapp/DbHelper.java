@@ -42,10 +42,10 @@ public class DbHelper {
         if (getFirstRecordOfEvents() == 0) {
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('Tutorial', 'Tutaj pojawią się tytuły', 'Restaurant', 'Tutaj będzie dokładny adres miejsca', 'To jest krótki opis aktywności która na nas czeka.', '0', 'Dzień i godzina', 'example', '1')");
+                    "VALUES ('tutorial', 'Here is the place for the title', 'Restaurant', 'Precise address will appear herePrecise address will appear herePrecise address will appear here', 'Short description of the event awaiting, will appear here. It is going to contain all thee necessary details.', '0', 'Day and the hour of the event', 'example', '1')");
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('2', 'Second', 'Attraction', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', 'Monday 08:00', 'testimg', '2')");
+                    "VALUES ('second', 'Second activity there', 'Attraction', 'dluga 5, 21-123 warszawa', 'er, at 0dp the button goes away, and at wrap_content it will always choose the text to set the width. How do I force it to use the weight as its method to set w ', '0', 'Monday 08:00', 'testimg', '2')");
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('3', 'TThird', 'Patisserie', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', 'Tuesday 01:00', 'testimg2', '3')");
@@ -60,13 +60,13 @@ public class DbHelper {
                     "VALUES ('6', 'Sixth', 'Sightseeing', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '10:00', 'testimg', '6')");
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('passPhr3', 'Seventh', 'Sightseeing', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg', '7')");
+                    "VALUES ('passphr3', 'Seventh', 'Sightseeing', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg', '7')");
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('8', 'Eight', 'Sightseeing', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '14:00', 'testimg', '8')");
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('passPhr4', 'Ninth', 'Event', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg', '9')");
+                    "VALUES ('passphr4', 'Ninth', 'Event', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg', '9')");
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('10', 'Tenth', 'Flight', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg3', '10')");
