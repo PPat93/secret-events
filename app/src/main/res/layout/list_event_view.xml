@@ -91,7 +91,7 @@
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
         android:layout_toStartOf="@+id/dividerHorizontal1"
-        android:layout_toEndOf="@+id/detailedEeventTimeIcon"
+        android:layout_toEndOf="@+id/detailedEventTimeIcon"
         android:text="Event Time"
         android:textStyle="italic" />
 
@@ -133,7 +133,7 @@
         android:layout_marginEnd="0dp" />
 
     <ImageView
-        android:id="@+id/detailedEeventTimeIcon"
+        android:id="@+id/detailedEventTimeIcon"
         android:layout_width="24dp"
         android:layout_height="15dp"
         android:layout_below="@+id/divider2"

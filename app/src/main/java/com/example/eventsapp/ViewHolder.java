@@ -22,7 +22,7 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         eventPicture = itemView.findViewById(R.id.detailedEventPicture);
         eventTitleIcon = itemView.findViewById(R.id.detailedEventTitleIcon);
         eventAddressIcon = itemView.findViewById(R.id.detailedEventAddressIcon);
-        eventTimeIcon = itemView.findViewById(R.id.detailedEeventTimeIcon);
+        eventTimeIcon = itemView.findViewById(R.id.detailedEventTimeIcon);
         eventPassphrase = itemView.findViewById(R.id.eventPassphrase);
     }
 }
