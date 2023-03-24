@@ -80,9 +80,10 @@
 
     <View
         android:id="@+id/dividerHorizontal1"
-        android:layout_width="1dp"
+        android:layout_width="2dp"
         android:layout_height="match_parent"
         android:layout_above="@+id/divider4"
+        android:layout_alignBottom="@+id/detailedEventPicture"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
         android:layout_toStartOf="@+id/detailedEventTypeIcon"
@@ -90,9 +91,9 @@
 
     <View
         android:id="@+id/dividerHorizontal2"
-        android:layout_width="1dp"
+        android:layout_width="2dp"
         android:layout_height="match_parent"
-        android:layout_above="@+id/divider4"
+        android:layout_alignBottom="@+id/detailedEventPicture"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
         android:layout_toStartOf="@+id/detailedEventPicture"
@@ -100,7 +101,7 @@
 
     <ImageView
         android:id="@+id/detailedEventTypeIcon"
-        android:layout_width="50dp"
+        android:layout_width="60dp"
         android:layout_height="100dp"
         android:layout_alignBottom="@+id/detailedEventPicture"
         android:layout_alignParentTop="true"
@@ -171,5 +172,16 @@
         android:layout_toStartOf="@+id/eventAddress"
         android:text="TextView"
         android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/detailedEventTime"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_toStartOf="@+id/detailedEventTypeIcon" />
 
 </RelativeLayout>
