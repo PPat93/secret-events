@@ -3,6 +3,8 @@ package com.example.eventsapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,6 +25,15 @@ public class EventDetails extends AppCompatActivity {
 
         singleEvent = MainActivity.dbRecordsRetrieved.get(passphrase);
         defineAndAssignAllEventData();
+
+//        close activity
+        Button backButton = findViewById(R.id.closeDetails);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     private void defineAndAssignAllEventData() {
