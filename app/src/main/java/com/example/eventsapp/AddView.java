@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,6 +31,7 @@ public class AddView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_add);
         cancelButton = findViewById(R.id.cancelButton);
+        passphraseInput = findViewById(R.id.passphraseInput);
         okButton = findViewById(R.id.okButton);
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,17 +75,16 @@ public class AddView extends AppCompatActivity {
 
         passphraseInput = findViewById(R.id.passphraseInput);
         receivedPass = findViewById(R.id.receivedTitle);
-        newPassphraseValue += passphraseInput.getText().toString();
-        receivedPass.setText(new StringBuilder().append("Password entered: ").append(newPassphraseValue).toString());
+        newPassphraseValue = passphraseInput.getText().toString();
         revealNewPassIntent = new Intent(this, MainActivity.class);
 
         alertDialog = createAlertDialog(newPassphraseValue);
         AtomicBoolean isEventFound = searchAndActivateEventsDbItem(newPassphraseValue);
-        if (isEventFound.get())
-            alertDialog.show();
-        else {
-            newPassphraseValue = "";
+        if (isEventFound.get()) {
             receivedPass.setText("");
+            alertDialog.show();
+        } else {
+            receivedPass.setText(new StringBuilder().append("Unfortunately, ").append(newPassphraseValue).append(" is not the one. Nice try :P").toString());
         }
     }
 
