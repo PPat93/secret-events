@@ -2,7 +2,12 @@ package com.example.eventsapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,6 +28,31 @@ public class EventDetails extends AppCompatActivity {
 
         singleEvent = MainActivity.dbRecordsRetrieved.get(passphrase);
         defineAndAssignAllEventData();
+
+//        close activity
+        Button backButton = findViewById(R.id.closeDetails);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+        findViewById(R.id.detailedEventAddress).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+//                        on address click open Google Maps with event address searched
+                        Uri gmmIntentUri = Uri.parse("geo:0,0?q=" + singleEvent.get(2));
+                        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                        mapIntent.setPackage("com.google.android.apps.maps");
+                        startActivity(mapIntent);
+                    }
+                }, 1000);
+            }
+        });
     }
 
     private void defineAndAssignAllEventData() {
