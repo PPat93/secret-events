@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
 
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class AddView extends AppCompatActivity {
@@ -79,22 +80,30 @@ public class AddView extends AppCompatActivity {
         revealNewPassIntent = new Intent(this, MainActivity.class);
 
         alertDialog = createAlertDialog(newPassphraseValue);
-        AtomicBoolean isEventFound = searchAndActivateEventsDbItem(newPassphraseValue);
-        if (isEventFound.get()) {
+        int isEventFound = searchAndActivateEventsDbItem(newPassphraseValue);
+        if (isEventFound == 1) {
             receivedPass.setText("");
             alertDialog.show();
-        } else {
-            receivedPass.setText(new StringBuilder().append("Unfortunately, ").append(newPassphraseValue).append(" is not the one. Nice try :P").toString());
+        } else if (isEventFound == 0) {
+            receivedPass.setText(new StringBuilder().append("Unfortunately, ").append(newPassphraseValue).append(" password does not exist. Nice try.").toString());
+        } else if (isEventFound == 2) {
+            receivedPass.setText(new StringBuilder().append("Already found! Don't be so smart.").toString());
         }
     }
 
-    protected AtomicBoolean searchAndActivateEventsDbItem(String passphrase) {
-//       Retrieved db records are searched for the passphrase that was passed in the AddView input if so,
-//       eventFound variable is set to true, else, it remains false. Also, redundant whitespaces of the
-//       passphrase are removed and the AtomicBoolean is returned
+    protected int searchAndActivateEventsDbItem(String passphrase) {
+//        if isEventFoundLocal = 0 - item not found, if 1 - item found and good to activate, if 2 - already revealed
+        int isEventFoundLocal = 0;
+        String sanitizedPassphrase = passphrase.trim().toLowerCase();
 
-        AtomicBoolean eventFound = new AtomicBoolean(false);
-        eventFound.set(MainActivity.dbRecordsRetrieved.containsKey(passphrase.trim().toLowerCase()));
-        return eventFound;
+        boolean doesEventExist = MainActivity.dbRecordsRetrieved.containsKey(sanitizedPassphrase);
+
+        if (doesEventExist) {
+            if (Objects.equals(MainActivity.dbRecordsRetrieved.get(sanitizedPassphrase).get(4), "1"))
+                isEventFoundLocal = 2;
+            else
+                isEventFoundLocal = 1;
+        }
+        return isEventFoundLocal;
     }
 }
