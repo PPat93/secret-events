@@ -66,58 +66,49 @@ public class FanfareAnim {
                 .setListener(null);
     }
 
-    public static void defineConfettiAnimation(KonfettiView linearRecycler) {
-        EmitterConfig emitterConfig = new Emitter(3L, TimeUnit.SECONDS).perSecond(50);
-        Party party = new PartyFactory(emitterConfig)
-                .angle(270)
-                .spread(90)
-                .setSpeedBetween(1f, 5f)
-                .timeToLive(2000L)
-                .sizes(new Size(12, 5f, 0.2f))
-                .position(0.0, 0.0, 1.0, 0.0)
-                .build();
+    public static void confettiShot(KonfettiView konfettiView) {
+        EmitterConfig emitterConfig = new Emitter(2L, TimeUnit.SECONDS).perSecond(50);
+        konfettiView.start(
+                new PartyFactory(emitterConfig)
+                        .angle(Angle.RIGHT - 45)
+                        .spread(Spread.SMALL)
+                        .colors(Arrays.asList(0x0335fc, 0xfcc203, 0xcc2727, 0x2b8f2b))
+                        .setSpeedBetween(10f, 40f)
+                        .position(new Position.Relative(0.0, 0.22))
+                        .build(),
+                new PartyFactory(emitterConfig)
+                        .angle(Angle.LEFT + 45)
+                        .spread(Spread.SMALL)
+                        .colors(Arrays.asList(0x0335fc, 0xfcc203, 0xcc2727, 0x2b8f2b))
+                        .setSpeedBetween(10f, 40f)
+                        .position(new Position.Relative(1.0, 0.22))
+                        .build()
+        );
     }
 
-        public static void wholeFanfareAnimation(ImageView fanfareLeft, ImageView fanfareRight, KonfettiView konfettiView) {
-            EmitterConfig emitterConfig = new Emitter(3L, TimeUnit.SECONDS).perSecond(50);
-            konfettiView.start(
-                    new PartyFactory(emitterConfig)
-                            .angle(Angle.RIGHT - 45)
-                            .spread(Spread.SMALL)
-                            .colors(Arrays.asList(0xfce18a, 0xff726d, 0xf4306d, 0x451490))
-                            .setSpeedBetween(10f, 30f)
-                            .position(new Position.Relative(0.0, 0.2))
-                            .build(),
-                    new PartyFactory(emitterConfig)
-                            .angle(Angle.LEFT + 45)
-                            .spread(Spread.SMALL)
-                            .colors(Arrays.asList(0xfce18a, 0xff726d, 0xf4306d, 0x451490))
-                            .setSpeedBetween(10f, 30f)
-                            .position(new Position.Relative(1.0, 0.2))
-                            .build()
-            );
+    public static void wholeFanfareAnimation(ImageView fanfareLeft, ImageView fanfareRight, KonfettiView konfettiView) {
 
-        FanfareAnim.fanfareAlphaIntroAnimation(fanfareLeft, fanfareRight);
+        confettiShot(konfettiView);
+        fanfareAlphaIntroAnimation(fanfareLeft, fanfareRight);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                FanfareAnim.fanfareShakeUpAnimation(fanfareLeft, fanfareRight);
+                fanfareShakeUpAnimation(fanfareLeft, fanfareRight);
             }
         }, 600);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                FanfareAnim.fanfareShakeDownAnimation(fanfareLeft, fanfareRight);
+                fanfareShakeDownAnimation(fanfareLeft, fanfareRight);
             }
         }, 1000);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                FanfareAnim.fanfareAlphaOutroAnimation(fanfareLeft, fanfareRight);
+                fanfareAlphaOutroAnimation(fanfareLeft, fanfareRight);
             }
         }, 1400);
-
     }
 }
