@@ -31,12 +31,14 @@
             android:id="@+id/fieldSection"
             android:layout_width="wrap_content"
             android:layout_height="202dp"
+            android:layout_above="@+id/buttonLayout"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
+            android:layout_marginBottom="0dp"
             android:orientation="vertical">
 
             <TextView
@@ -57,10 +59,19 @@
                 android:hint="@string/passphrase_input_hint"
                 android:inputType="text" />
 
-            <TextView
-                android:id="@+id/receivedTitle"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/receivedTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:textSize="18sp" />
+            </RelativeLayout>
 
         </LinearLayout>
 
