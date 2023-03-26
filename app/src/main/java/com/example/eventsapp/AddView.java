@@ -84,7 +84,7 @@ public class AddView extends AppCompatActivity {
             receivedPass.setText("");
             alertDialog.show();
         } else if (isEventFound == 0) {
-            receivedPass.setText(new StringBuilder().append("Unfortunately, ").append(newPassphraseValue).append(" password does not exist. Nice try.").toString());
+            receivedPass.setText(new StringBuilder().append("Unfortunately, \"").append(newPassphraseValue).append("\" password does not exist. Nice try.").toString());
         } else if (isEventFound == 2) {
             receivedPass.setText(new StringBuilder().append("Already revealed! Don't be so smart.").toString());
         }
