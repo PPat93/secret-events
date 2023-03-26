@@ -14,7 +14,7 @@ public class DbHelper {
 
     public static int getFirstRecordOfEvents() {
 
-        Cursor c = MainActivity.eventsDB.rawQuery("SELECT * FROM events LIMIT 1;", null);
+        Cursor c = MainListActivity.eventsDB.rawQuery("SELECT * FROM events LIMIT 1;", null);
 
         c.moveToFirst();
         int tableSize = c.getCount();
@@ -23,7 +23,7 @@ public class DbHelper {
     }
 
     public static void fillDB() {
-        MainActivity.eventsDB.execSQL("CREATE TABLE IF NOT EXISTS " +
+        MainListActivity.eventsDB.execSQL("CREATE TABLE IF NOT EXISTS " +
                 "events (" +
                 "passphrase VARCHAR(100), " +
                 "title VARCHAR(100), " +
@@ -40,46 +40,46 @@ public class DbHelper {
 
 //        protection so db is filled only if no data exists in db
         if (getFirstRecordOfEvents() == 0) {
-            MainActivity.eventsDB.execSQL("INSERT INTO " +
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('tutorial', 'Here is the place for the title', 'Restaurant', 'Precise address will appear herePrecise address will appear herePrecise address will appear here', 'Short description of the event awaiting, will appear here. It is going to contain all thee necessary details.', '0', 'Day and the hour of the event', 'example', '1')");
-            MainActivity.eventsDB.execSQL("INSERT INTO " +
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('second', 'Second activity there', 'Attraction', 'dluga 5, 21-123 warszawa', 'er, at 0dp the button goes away, and at wrap_content it will always choose the text to set the width. How do I force it to use the weight as its method to set w ', '0', 'Monday 08:00', 'testimg', '2')");
-            MainActivity.eventsDB.execSQL("INSERT INTO " +
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('3', 'TThird', 'Patisserie', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', 'Tuesday 01:00', 'testimg2', '3')");
-            MainActivity.eventsDB.execSQL("INSERT INTO " +
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('4', 'Fourth', 'Restaurant', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', ' Friday 12:00', 'testimg', '4')");
-            MainActivity.eventsDB.execSQL("INSERT INTO " +
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('5', 'fifth', 'Event', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', 'Friday 11:00', 'testimg', '5')");
-            MainActivity.eventsDB.execSQL("INSERT INTO " +
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('6', 'Sixth', 'Sightseeing', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '10:00', 'testimg', '6')");
-            MainActivity.eventsDB.execSQL("INSERT INTO " +
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('passphr3', 'Seventh', 'Sightseeing', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg', '7')");
-            MainActivity.eventsDB.execSQL("INSERT INTO " +
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('8', 'Eight', 'Sightseeing', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '14:00', 'testimg', '8')");
-            MainActivity.eventsDB.execSQL("INSERT INTO " +
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('passphr4', 'Ninth', 'Event', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg', '9')");
-            MainActivity.eventsDB.execSQL("INSERT INTO " +
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('10', 'Tenth', 'Flight', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg3', '10')");
-            MainActivity.eventsDB.execSQL("INSERT INTO " +
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('11', 'eleven', 'Patisserie', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg3', '11')");
-            MainActivity.eventsDB.execSQL("INSERT INTO " +
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('12', 'Twelveth', 'Attraction', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg3', '12')");
-            MainActivity.eventsDB.execSQL("INSERT INTO " +
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('13', 'Thirteenth', 'Attraction', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '15:00', 'testimg', '13')");
-            MainActivity.eventsDB.execSQL("INSERT INTO " +
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('dupa', 'No wiesz ', 'Attraction', 'dluga 5, 21-123 warszawa', 'specjalnie dla ciebie', '0', '15:00', 'testimg', '14')");
         }

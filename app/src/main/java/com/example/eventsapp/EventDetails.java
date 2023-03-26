@@ -26,7 +26,7 @@ public class EventDetails extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         String passphrase = bundle.getString("passphrase");
 
-        singleEvent = MainActivity.dbRecordsRetrieved.get(passphrase);
+        singleEvent = MainListActivity.dbRecordsRetrieved.get(passphrase);
         defineAndAssignAllEventData();
 
 //        close activity
