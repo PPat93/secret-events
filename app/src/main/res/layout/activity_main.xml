@@ -17,6 +17,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <nl.dionsegijn.konfetti.xml.KonfettiView
+        android:id="@+id/linearRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -34,7 +44,28 @@
             android:id="@+id/mainEventsList"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/fanfareLeft"
+        android:layout_width="104dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="60dp"
+        android:alpha="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mainActIncludeToolbar"
+        app:srcCompat="@drawable/fanfareleft" />
+
+    <ImageView
+        android:id="@+id/fanfareRight"
+        android:layout_width="104dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="60dp"
+        android:alpha="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mainActIncludeToolbar"
+        app:srcCompat="@drawable/fanfareright" />
 
     <FrameLayout
         android:layout_width="wrap_content"
