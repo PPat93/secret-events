@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     static List<Event> events = new ArrayList<Event>();
     static HashMap<String, List<String>> dbRecordsRetrieved = new HashMap<String, List<String>>();
     static SQLiteDatabase eventsDB;
-    boolean fanfares = false;
+    static boolean runFanfaresAnim = false;
     ImageView fanfareRight;
     ImageView fanfareLeft;
     KonfettiView konfettiView;
@@ -86,18 +86,8 @@ public class MainActivity extends AppCompatActivity {
         mainEventsList.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         mainEventsList.setAdapter(new ViewAdapter(getApplicationContext(), events));
 
-//        retrieve extra int if passphrase was just added
-        Bundle bundle = getIntent().getExtras();
-        try {
-            bundle.getString("passphraseAdded");
-            fanfares = true;
-        } catch (Exception e) {
-            fanfares = false;
-        }
-
-        if (fanfares) {
-            bundle.remove("passphraseAdded");
-            fanfares = false;
+        if (runFanfaresAnim) {
+            runFanfaresAnim = false;
             FanfareAnim.wholeFanfareAnimation(fanfareLeft, fanfareRight, konfettiView);
         }
     }

@@ -59,7 +59,7 @@ public class AddView extends AppCompatActivity {
                     MainActivity.eventsDB.execSQL("UPDATE events SET is_visible = 1 WHERE passphrase = '" + passphrase.trim().toLowerCase() + "';");
                     newPassphraseValue = "";
                     receivedPass.setText("");
-                    revealNewPassIntent.putExtra("passphraseAdded", "1");
+                    MainActivity.runFanfaresAnim = true;
                     startActivity(revealNewPassIntent);
                 })
                 .setNegativeButton("No :(", (dialogInterface, i) -> {
