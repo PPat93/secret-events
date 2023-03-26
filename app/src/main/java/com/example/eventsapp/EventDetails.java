@@ -50,7 +50,7 @@ public class EventDetails extends AppCompatActivity {
                         mapIntent.setPackage("com.google.android.apps.maps");
                         startActivity(mapIntent);
                     }
-                }, 1000);
+                }, 500);
             }
         });
     }

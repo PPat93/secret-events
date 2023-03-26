@@ -3,10 +3,8 @@ package com.example.eventsapp;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
-<<<<<<< Updated upstream
 import android.util.Log;
-=======
->>>>>>> Stashed changes
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +14,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
 
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class AddView extends AppCompatActivity {
@@ -33,6 +32,7 @@ public class AddView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_add);
         cancelButton = findViewById(R.id.cancelButton);
+        passphraseInput = findViewById(R.id.passphraseInput);
         okButton = findViewById(R.id.okButton);
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,34 +77,34 @@ public class AddView extends AppCompatActivity {
 
         passphraseInput = findViewById(R.id.passphraseInput);
         receivedPass = findViewById(R.id.receivedTitle);
-        newPassphraseValue += passphraseInput.getText().toString();
-        receivedPass.setText(new StringBuilder().append("Password entered: ").append(newPassphraseValue).toString());
+        newPassphraseValue = passphraseInput.getText().toString();
         revealNewPassIntent = new Intent(this, MainActivity.class);
 
         alertDialog = createAlertDialog(newPassphraseValue);
-        AtomicBoolean isEventFound = searchAndActivateEventsDbItem(newPassphraseValue);
-        if (isEventFound.get())
-            alertDialog.show();
-<<<<<<< Updated upstream
-        else {
-            newPassphraseValue = "";
+        int isEventFound = searchAndActivateEventsDbItem(newPassphraseValue);
+        if (isEventFound == 1) {
             receivedPass.setText("");
-=======
+            alertDialog.show();
         } else if (isEventFound == 0) {
             receivedPass.setText(new StringBuilder().append("Unfortunately, ").append(newPassphraseValue).append(" password does not exist. Nice try.").toString());
         } else if (isEventFound == 2) {
-            receivedPass.setText(new StringBuilder().append("Already revealed! Don't be so smart.").toString());
->>>>>>> Stashed changes
+            receivedPass.setText(new StringBuilder().append("Already found! Don't be so smart.").toString());
         }
     }
 
-    protected AtomicBoolean searchAndActivateEventsDbItem(String passphrase) {
-//       Retrieved db records are searched for the passphrase that was passed in the AddView input if so,
-//       eventFound variable is set to true, else, it remains false. Also, redundant whitespaces of the
-//       passphrase are removed and the AtomicBoolean is returned
+    protected int searchAndActivateEventsDbItem(String passphrase) {
+//        if isEventFoundLocal = 0 - item not found, if 1 - item found and good to activate, if 2 - already revealed
+        int isEventFoundLocal = 0;
+        String sanitizedPassphrase = passphrase.trim().toLowerCase();
 
-        AtomicBoolean eventFound = new AtomicBoolean(false);
-        eventFound.set(MainActivity.dbRecordsRetrieved.containsKey(passphrase.trim().toLowerCase()));
-        return eventFound;
+        boolean doesEventExist = MainActivity.dbRecordsRetrieved.containsKey(sanitizedPassphrase);
+
+        if (doesEventExist) {
+            if (Objects.equals(MainActivity.dbRecordsRetrieved.get(sanitizedPassphrase).get(4), "1"))
+                isEventFoundLocal = 2;
+            else
+                isEventFoundLocal = 1;
+        }
+        return isEventFoundLocal;
     }
 }
