@@ -3,8 +3,6 @@ package com.example.eventsapp;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -61,6 +59,7 @@ public class AddView extends AppCompatActivity {
                     MainActivity.eventsDB.execSQL("UPDATE events SET is_visible = 1 WHERE passphrase = '" + passphrase.trim().toLowerCase() + "';");
                     newPassphraseValue = "";
                     receivedPass.setText("");
+                    MainActivity.runFanfaresAnim = true;
                     startActivity(revealNewPassIntent);
                 })
                 .setNegativeButton("No :(", (dialogInterface, i) -> {
@@ -85,9 +84,9 @@ public class AddView extends AppCompatActivity {
             receivedPass.setText("");
             alertDialog.show();
         } else if (isEventFound == 0) {
-            receivedPass.setText(new StringBuilder().append("Unfortunately, ").append(newPassphraseValue).append(" password does not exist. Nice try.").toString());
+            receivedPass.setText(new StringBuilder().append("Unfortunately, \"").append(newPassphraseValue).append("\" password does not exist. Nice try.").toString());
         } else if (isEventFound == 2) {
-            receivedPass.setText(new StringBuilder().append("Already found! Don't be so smart.").toString());
+            receivedPass.setText(new StringBuilder().append("Already revealed! Don't be so smart.").toString());
         }
     }
 

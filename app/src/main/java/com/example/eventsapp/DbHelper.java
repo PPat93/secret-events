@@ -79,6 +79,9 @@ public class DbHelper {
             MainActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('13', 'Thirteenth', 'Attraction', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '15:00', 'testimg', '13')");
+            MainActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('dupa', 'No wiesz ', 'Attraction', 'dluga 5, 21-123 warszawa', 'specjalnie dla ciebie', '0', '15:00', 'testimg', '14')");
         }
     }
 }

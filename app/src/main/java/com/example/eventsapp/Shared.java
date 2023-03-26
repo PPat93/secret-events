@@ -1,9 +1,11 @@
 package com.example.eventsapp;
 
+import android.view.animation.AlphaAnimation;
+import android.widget.ImageView;
+
 import java.util.HashMap;
 
 public class Shared {
-
     public static HashMap<String, Integer> eventTypesMap = new HashMap<String, Integer>();
     public static HashMap<String, Integer> eventImagesMap = new HashMap<String, Integer>();
 
