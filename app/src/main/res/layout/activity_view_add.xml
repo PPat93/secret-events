@@ -52,7 +52,7 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="1dp"
                 android:text="@string/passphrase_title"
-                android:textColor="@color/icons"
+                android:textColor="@color/secondary_icons_and_texts"
                 android:textSize="30sp" />
 
             <TextView
@@ -81,9 +81,9 @@
                 android:ems="10"
                 android:hint="@string/passphrase_input_hint"
                 android:inputType="text"
-                android:textColor="@color/icons"
-                android:textColorHighlight="@color/icons"
-                android:textColorLink="@color/icons" />
+                android:textColor="@color/secondary_icons_and_texts"
+                android:textColorHighlight="@color/secondary_icons_and_texts"
+                android:textColorLink="@color/secondary_icons_and_texts" />
         </RelativeLayout>
 
         <LinearLayout
@@ -104,7 +104,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.4"
                 android:text="@android:string/cancel"
-                android:textColor="@color/white" />
+                android:textColor="@color/primary_icons_and_texts" />
 
             <Space
                 android:layout_width="0dp"
@@ -117,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.4"
                 android:text="@android:string/ok"
-                android:textColor="@color/white" />
+                android:textColor="@color/primary_icons_and_texts" />
         </LinearLayout>
 
     </RelativeLayout>

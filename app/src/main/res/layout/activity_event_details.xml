@@ -72,7 +72,7 @@
                         android:layout_marginEnd="0dp"
                         android:layout_weight="0.75"
                         android:text="Event Title"
-                        android:textColor="@color/icons"
+                        android:textColor="@color/secondary_icons_and_texts"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -127,7 +127,7 @@
                         android:layout_marginEnd="0dp"
                         android:layout_weight="0.75"
                         android:text="Event Type"
-                        android:textColor="@color/icons"
+                        android:textColor="@color/secondary_icons_and_texts"
                         android:textSize="18sp" />
                 </LinearLayout>
 
@@ -201,7 +201,7 @@
                         android:layout_marginBottom="0dp"
                         android:layout_weight=".75"
                         android:text="Event Time"
-                        android:textColor="@color/icons"
+                        android:textColor="@color/secondary_icons_and_texts"
                         android:textSize="18sp" />
 
                 </LinearLayout>
@@ -233,7 +233,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.75"
                         android:text="Event Description"
-                        android:textColor="@color/icons"
+                        android:textColor="@color/secondary_icons_and_texts"
                         android:textSize="18sp" />
 
                 </LinearLayout>
@@ -258,7 +258,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="30dp"
                         android:text="Back"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/primary_icons_and_texts" />
                 </RelativeLayout>
 
                 <View

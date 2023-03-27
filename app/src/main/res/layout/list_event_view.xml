@@ -18,7 +18,7 @@
         android:layout_toStartOf="@+id/dividerHorizontal1"
         android:layout_toEndOf="@+id/detailedEventTitleIcon"
         android:text="Event Title"
-        android:textColor="@color/icons"
+        android:textColor="@color/secondary_icons_and_texts"
         android:textStyle="bold" />
 
     <View
@@ -43,7 +43,7 @@
         android:layout_marginTop="0dp"
         android:layout_toStartOf="@+id/dividerHorizontal1"
         android:text="Event Address"
-        android:textColor="@color/icons" />
+        android:textColor="@color/secondary_icons_and_texts" />
 
     <View
         android:id="@+id/divider2"
@@ -142,7 +142,7 @@
         android:layout_toStartOf="@+id/dividerHorizontal1"
         android:layout_toEndOf="@+id/detailedEventTimeIcon"
         android:text="Event Time"
-        android:textColor="@color/icons"
+        android:textColor="@color/secondary_icons_and_texts"
         android:textStyle="italic" />
 
     <Space
