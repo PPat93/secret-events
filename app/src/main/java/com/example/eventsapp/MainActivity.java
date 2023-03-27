@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 switchToMainListActivity();
             }
-        }, 5000);
+        }, 1000);
 
     }
 

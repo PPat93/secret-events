@@ -5,10 +5,17 @@
     <color name="accent">#EC0202</color>
     <color name="background">#ffde91</color>
     <color name="white">#FFFFFF</color>
-    <color name="color_on_secondary">#e3cfb3</color>
-    <color name="color_secondary_variant">#884200</color>
-    <color name="color_secondary">#a35e00</color>
+    <color name="color_on_secondary">#FBFBFF</color>
+    <color name="color_secondary_variant">#2A7F62</color>
+    <color name="color_secondary">#01BAEF</color>
     <color name="color_on_primary">#dab3b3</color>
-    <color name="color_primary">#850000</color>
+    <color name="color_primary">#F58A07</color>
     <color name="color_primary_variant">#680000</color>
+
+<!--    <color name="color_primary">#592941</color>-->
+<!--    <color name="color_on_primary">#B6C649</color>-->
+<!--    <color name="color_secondary">#C9DDFF</color>-->
+<!--    <color name="color_on_secondary">#508991</color>-->
+<!--    <color name="color_secondary_variant">#ff934f</color>-->
+<!--    <color name="color_primary_variant">#157a6e</color>-->
 </resources>
