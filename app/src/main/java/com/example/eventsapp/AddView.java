@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
 
 import java.util.Objects;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 public class AddView extends AppCompatActivity {
 
@@ -56,10 +55,10 @@ public class AddView extends AppCompatActivity {
                 .setMessage(HtmlCompat.fromHtml("Are you sure to add new <b>" + passphrase + "</b> phrase and to have even more fun?", HtmlCompat.FROM_HTML_MODE_LEGACY))
                 .setPositiveButton("YES!", (dialogInterface, i) -> {
                     Toast.makeText(AddView.this, "WOHOOO! Let's go!", Toast.LENGTH_SHORT).show();
-                    MainActivity.eventsDB.execSQL("UPDATE events SET is_visible = 1 WHERE passphrase = '" + passphrase.trim().toLowerCase() + "';");
+                    MainListActivity.eventsDB.execSQL("UPDATE events SET is_visible = 1 WHERE passphrase = '" + passphrase.trim().toLowerCase() + "';");
                     newPassphraseValue = "";
                     receivedPass.setText("");
-                    MainActivity.runFanfaresAnim = true;
+                    MainListActivity.runFanfaresAnim = true;
                     startActivity(revealNewPassIntent);
                 })
                 .setNegativeButton("No :(", (dialogInterface, i) -> {
@@ -76,7 +75,7 @@ public class AddView extends AppCompatActivity {
         passphraseInput = findViewById(R.id.passphraseInput);
         receivedPass = findViewById(R.id.receivedTitle);
         newPassphraseValue = passphraseInput.getText().toString();
-        revealNewPassIntent = new Intent(this, MainActivity.class);
+        revealNewPassIntent = new Intent(this, MainListActivity.class);
 
         alertDialog = createAlertDialog(newPassphraseValue);
         int isEventFound = searchAndActivateEventsDbItem(newPassphraseValue);
@@ -95,10 +94,10 @@ public class AddView extends AppCompatActivity {
         int isEventFoundLocal = 0;
         String sanitizedPassphrase = passphrase.trim().toLowerCase();
 
-        boolean doesEventExist = MainActivity.dbRecordsRetrieved.containsKey(sanitizedPassphrase);
+        boolean doesEventExist = MainListActivity.dbRecordsRetrieved.containsKey(sanitizedPassphrase);
 
         if (doesEventExist) {
-            if (Objects.equals(MainActivity.dbRecordsRetrieved.get(sanitizedPassphrase).get(4), "1"))
+            if (Objects.equals(MainListActivity.dbRecordsRetrieved.get(sanitizedPassphrase).get(4), "1"))
                 isEventFoundLocal = 2;
             else
                 isEventFoundLocal = 1;

@@ -12,6 +12,9 @@
         android:theme="@style/Theme.EventsApp"
         tools:targetApi="31">
         <activity
+            android:name=".MainListActivity"
+            android:exported="false" />
+        <activity
             android:name=".EventDetails"
             android:exported="false" />
         <activity
@@ -25,7 +28,7 @@
         </activity>
         <activity
             android:name=".AddView"
-            android:exported="true"/>
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"
