@@ -16,8 +16,9 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/welcomeGif"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/yoxt" />
+            android:src="@drawable/welcomegif" />
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
