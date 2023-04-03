@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="icons">#595959</color>
-    <color name="accent">#EC0202</color>
-    <color name="background">#ffde91</color>
-    <color name="white">#FFFFFF</color>
-    <color name="color_on_secondary">#e3cfb3</color>
-    <color name="color_secondary_variant">#884200</color>
-    <color name="color_secondary">#a35e00</color>
-    <color name="color_on_primary">#dab3b3</color>
-    <color name="color_primary">#850000</color>
-    <color name="color_primary_variant">#680000</color>
+    <color name="secondary_icons_and_texts">#595959</color>
+    <color name="primary_icons_and_texts">#FFFFFF</color>
+    <color name="color_on_secondary">#FBFBFF</color>
+    <color name="color_secondary_variant">#2A7F62</color>
+    <color name="color_secondary">#01BAEF</color>
+    <color name="color_primary">#F58A07</color>
 </resources>

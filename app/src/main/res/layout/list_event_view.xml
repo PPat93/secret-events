@@ -5,7 +5,7 @@
     android:id="@+id/singleEventDetails"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/background">
+    android:background="@drawable/rounded_corners">
 
     <TextView
         android:id="@+id/detailedEventTitle"
@@ -18,6 +18,7 @@
         android:layout_toStartOf="@+id/dividerHorizontal1"
         android:layout_toEndOf="@+id/detailedEventTitleIcon"
         android:text="Event Title"
+        android:textColor="@color/secondary_icons_and_texts"
         android:textStyle="bold" />
 
     <View
@@ -41,7 +42,8 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         android:layout_toStartOf="@+id/dividerHorizontal1"
-        android:text="Event Address" />
+        android:text="Event Address"
+        android:textColor="@color/secondary_icons_and_texts" />
 
     <View
         android:id="@+id/divider2"
@@ -140,6 +142,7 @@
         android:layout_toStartOf="@+id/dividerHorizontal1"
         android:layout_toEndOf="@+id/detailedEventTimeIcon"
         android:text="Event Time"
+        android:textColor="@color/secondary_icons_and_texts"
         android:textStyle="italic" />
 
     <Space
@@ -151,10 +154,12 @@
     <View
         android:id="@+id/divider4"
         android:layout_width="match_parent"
-        android:layout_height="3dp"
+        android:layout_height="1dp"
         android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
         android:background="?android:attr/listDivider" />
 

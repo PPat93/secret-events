@@ -1,17 +1,20 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.EventsApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Primary brand color. -->
+        <!-- Primary color of the app - title bar and buttons-->
         <item name="colorPrimary">@color/color_primary</item>
-        <item name="colorPrimaryVariant">@color/color_primary_variant</item>
-        <item name="colorOnPrimary">@color/color_on_primary</item>
-        <!-- Secondary brand color. -->
+        <!-- Main back-backgrounds -->
         <item name="colorSecondary">@color/color_secondary</item>
+        <!-- Accent of clickable elements - like links -->
         <item name="colorSecondaryVariant">@color/color_secondary_variant</item>
+        <!-- Closer backgrounds of the views -->
         <item name="colorOnSecondary">@color/color_on_secondary</item>
+        <!-- Primary texts and icons -->
+        <item name="colorOnPrimary">@color/primary_icons_and_texts</item>
+        <!-- Secondary texts and icons -->
+        <item name="android:textColorSecondary">@color/secondary_icons_and_texts</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <item name="android:statusBarColor">@color/color_primary</item>
     </style>
 
     <style name="Theme.EventsApp.NoActionBar">

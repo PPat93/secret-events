@@ -21,7 +21,7 @@
         android:layout_marginTop="80dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:background="@color/background"
+        android:background="@drawable/rounded_corners"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -72,6 +72,7 @@
                         android:layout_marginEnd="0dp"
                         android:layout_weight="0.75"
                         android:text="Event Title"
+                        android:textColor="@color/secondary_icons_and_texts"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -126,8 +127,8 @@
                         android:layout_marginEnd="0dp"
                         android:layout_weight="0.75"
                         android:text="Event Type"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textColor="@color/secondary_icons_and_texts"
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <View
@@ -163,8 +164,8 @@
                         android:layout_marginEnd="0dp"
                         android:layout_weight="0.75"
                         android:text="Event Address"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textColor="@color/color_secondary_variant"
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <View
@@ -200,8 +201,8 @@
                         android:layout_marginBottom="0dp"
                         android:layout_weight=".75"
                         android:text="Event Time"
-                        android:textSize="18sp"
-                        android:textStyle="italic" />
+                        android:textColor="@color/secondary_icons_and_texts"
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
@@ -232,6 +233,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.75"
                         android:text="Event Description"
+                        android:textColor="@color/secondary_icons_and_texts"
                         android:textSize="18sp" />
 
                 </LinearLayout>
@@ -255,7 +257,8 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="30dp"
-                        android:text="Back" />
+                        android:text="Back"
+                        android:textColor="@color/primary_icons_and_texts" />
                 </RelativeLayout>
 
                 <View
