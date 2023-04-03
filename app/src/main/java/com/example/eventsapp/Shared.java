@@ -23,6 +23,7 @@ public class Shared {
         eventImagesMap.put("testimg2", R.drawable.testimg2);
         eventImagesMap.put("testimg3", R.drawable.testimg3);
         eventImagesMap.put("example", R.drawable.example);
+        eventImagesMap.put("pct_sex_machines_museum", R.drawable.pct_sex_machines_museum);
     }
 
     public static Integer getEventImagesMap(String hashKey) {
