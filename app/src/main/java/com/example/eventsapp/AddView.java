@@ -47,6 +47,7 @@ public class AddView extends AppCompatActivity {
         });
     }
 
+    //    creates a dialog - after a successful reveal it is displayed. Button yes allows to update db with visibility and new order number
     protected AlertDialog createAlertDialog(String passphrase) {
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this)
@@ -54,8 +55,10 @@ public class AddView extends AppCompatActivity {
                 .setTitle("More fun?")
                 .setMessage(HtmlCompat.fromHtml("Are you sure to add new <b>" + passphrase + "</b> phrase and to have even more fun?", HtmlCompat.FROM_HTML_MODE_LEGACY))
                 .setPositiveButton("YES!", (dialogInterface, i) -> {
+                    int sizeOfRevealedEventsPlusOne = MainListActivity.events.size() + 1;
                     Toast.makeText(AddView.this, "WOHOOO! Let's go!", Toast.LENGTH_SHORT).show();
                     MainListActivity.eventsDB.execSQL("UPDATE events SET is_visible = 1 WHERE passphrase = '" + passphrase.trim().toLowerCase() + "';");
+                    MainListActivity.eventsDB.execSQL("UPDATE events SET order_number = '" + sizeOfRevealedEventsPlusOne + "' WHERE passphrase = '" + passphrase.trim().toLowerCase() + "';");
                     newPassphraseValue = "";
                     receivedPass.setText("");
                     MainListActivity.runFanfaresAnim = true;
