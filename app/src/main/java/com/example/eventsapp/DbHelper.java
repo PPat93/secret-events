@@ -40,6 +40,10 @@ public class DbHelper {
 
 //        protection so db is filled only if no data exists in db
         if (getFirstRecordOfEvents() == 0) {
+
+//            All passphrases must be lower cased - in order to maintain better user experience and avoid necessity of explaining
+//            what should be upper and what should be lower case after giving the pass to the user, anything that matches letters and
+//            special chars of the pass is accepted - no matter if lower or upper case.
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('tutorial', 'Here is the place for the title', 'Restaurant', 'Precise address will appear herePrecise address will appear herePrecise address will appear here', 'Short description of the event awaiting, will appear here. It is going to contain all thee necessary details.', '0', 'Day and the hour of the event', 'example', '1')");
@@ -69,16 +73,16 @@ public class DbHelper {
                     "VALUES ('8', 'Ninth', 'Event', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg', '9')");
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('passPhr1', 'Tenth', 'Flight', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg3', '10')");
+                    "VALUES ('passphr1', 'Tenth', 'Flight', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg3', '10')");
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('passPhr2', 'eleven', 'Patisserie', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg3', '11')");
+                    "VALUES ('passphr2', 'eleven', 'Patisserie', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg3', '11')");
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('passPhr3', 'Twelveth', 'Attraction', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg3', '12')");
+                    "VALUES ('passphr3', 'Twelveth', 'Attraction', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '12:00', 'testimg3', '12')");
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('passPhr4', 'Thirteenth', 'Attraction', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '15:00', 'testimg', '13')");
+                    "VALUES ('passphr4', 'Thirteenth', 'Attraction', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', '15:00', 'testimg', '13')");
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('dupa', 'No wiesz ', 'Attraction', 'dluga 5, 21-123 warszawa', 'specjalnie dla ciebie', '0', '15:00', 'testimg', '14')");
