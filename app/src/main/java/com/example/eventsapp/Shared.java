@@ -24,6 +24,7 @@ public class Shared {
         eventImagesMap.put("testimg3", R.drawable.testimg3);
         eventImagesMap.put("example", R.drawable.example);
         eventImagesMap.put("pct_sex_machines_museum", R.drawable.pct_sex_machines_museum);
+        eventImagesMap.put("pct_naplavka_market", R.drawable.pct_naplavka_market);
     }
 
     public static Integer getEventImagesMap(String hashKey) {

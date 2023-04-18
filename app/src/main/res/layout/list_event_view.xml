@@ -7,6 +7,11 @@
     android:layout_height="wrap_content"
     android:background="@drawable/rounded_corners">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
     <TextView
         android:id="@+id/detailedEventTitle"
         android:layout_width="165dp"
@@ -101,26 +106,25 @@
         android:layout_toStartOf="@+id/detailedEventPicture"
         android:background="?android:attr/listDivider" />
 
-    <ImageView
-        android:id="@+id/detailedEventTypeIcon"
-        android:layout_width="60dp"
-        android:layout_height="100dp"
-        android:layout_alignBottom="@+id/detailedEventPicture"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="25dp"
-        android:layout_toStartOf="@+id/dividerHorizontal2"
-        app:srcCompat="@drawable/icon_pattisserie_24" />
+        <ImageView
+            android:id="@+id/detailedEventTypeIcon"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_alignTop="@+id/detailedEventPicture"
+            android:layout_alignBottom="@+id/detailedEventPicture"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toStartOf="@+id/dividerHorizontal2"
+            app:srcCompat="@drawable/icon_pattisserie_24" />
 
-    <ImageView
-        android:id="@+id/detailedEventPicture"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp" />
+        <ImageView
+            android:id="@+id/detailedEventPicture"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="0dp" />
 
     <ImageView
         android:id="@+id/detailedEventTimeIcon"
@@ -189,4 +193,5 @@
         android:layout_marginEnd="0dp"
         android:layout_toStartOf="@+id/detailedEventTypeIcon" />
 
+    </RelativeLayout>
 </RelativeLayout>

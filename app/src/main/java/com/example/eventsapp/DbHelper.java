@@ -46,10 +46,10 @@ public class DbHelper {
 //            special chars of the pass is accepted - no matter if lower or upper case.
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('tutorial', 'Here is the place for the title', 'Restaurant', 'Precise address will appear herePrecise address will appear herePrecise address will appear here', 'Short description of the event awaiting, will appear here. It is going to contain all thee necessary details.', '0', 'Day and the hour of the event', 'example', '1')");
+                    "VALUES ('tutorial', 'Tutaj pojawi się tytuł wydarzenia', 'Restaurant', 'Adres w mapach google', 'Krótki opis wydarzenia oraz wszystkie podstawowe informacje pojawią się w tej sekcji.', '0', 'Dzień i godzina wydarzenia', 'example', '1')");
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('1', 'Second activity there', 'Attraction', 'dluga 5, 21-123 warszawa', 'er, at 0dp the button goes away, and at wrap_content it will always choose the text to set the width. How do I force it to use the weight as its method to set w ', '0', 'Monday 08:00', 'testimg', '2')");
+                    "VALUES ('czeska targowica', 'Farmářské tržiště Náplavka', 'Restaurant', 'Rašínovo nábřeží Vltavská, Náplavka, 120 00 Praha 2, Czechy', 'Sobotni targ nad brzgiem Wełtawy. Lokalni wytwórcy co tydzień wystawiają się w około 90 stoiskach oferując potrawy, wypieki, ceramikę i wiele innych lokalnych produktów.', '0', 'Sobota 9:15', 'pct_naplavka_market', '2')");
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('2', 'TThird', 'Patisserie', 'dluga 5, 21-123 warszawa', 'Jakis tam opis', '0', 'Tuesday 01:00', 'testimg2', '3')");
