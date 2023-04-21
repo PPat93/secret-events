@@ -11,187 +11,196 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/detailedEventTitle"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_toStartOf="@+id/dividerHorizontal1"
+            android:layout_toEndOf="@+id/detailedEventTitleIcon"
+            android:text="Event Title"
+            android:textColor="@color/secondary_icons_and_texts"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/detailedEventTitle"
-        android:layout_width="165dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_toStartOf="@+id/dividerHorizontal1"
-        android:layout_toEndOf="@+id/detailedEventTitleIcon"
-        android:text="Event Title"
-        android:textColor="@color/secondary_icons_and_texts"
-        android:textStyle="bold" />
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/detailedEventTitle"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_toStartOf="@+id/dividerHorizontal1"
+            android:background="?android:attr/listDivider" />
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@+id/detailedEventTitle"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_toStartOf="@+id/dividerHorizontal1"
-        android:background="?android:attr/listDivider" />
+        <TextView
+            android:id="@+id/eventAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider"
+            android:layout_alignStart="@+id/detailedEventTime"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_toStartOf="@+id/dividerHorizontal1"
+            android:text="Event Address"
+            android:textColor="@color/secondary_icons_and_texts" />
 
-    <TextView
-        android:id="@+id/eventAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/divider"
-        android:layout_alignStart="@+id/detailedEventTime"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_toStartOf="@+id/dividerHorizontal1"
-        android:text="Event Address"
-        android:textColor="@color/secondary_icons_and_texts" />
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/eventAddress"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_toStartOf="@+id/dividerHorizontal1"
+            android:background="?android:attr/listDivider" />
 
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:layout_below="@+id/eventAddress"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_toStartOf="@+id/dividerHorizontal1"
-        android:background="?android:attr/listDivider" />
+        <ImageView
+            android:id="@+id/detailedEventAddressIcon"
+            android:layout_width="24dp"
+            android:layout_height="19dp"
+            android:layout_above="@+id/divider2"
+            android:layout_alignTop="@+id/eventAddress"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            tools:srcCompat="@drawable/baseline_location_on_24" />
 
-    <ImageView
-        android:id="@+id/detailedEventAddressIcon"
-        android:layout_width="24dp"
-        android:layout_height="19dp"
-        android:layout_above="@+id/divider2"
-        android:layout_alignTop="@+id/eventAddress"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        tools:srcCompat="@drawable/baseline_location_on_24" />
+        <ImageView
+            android:id="@+id/detailedEventTitleIcon"
+            android:layout_width="24dp"
+            android:layout_height="19dp"
+            android:layout_above="@+id/divider"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            tools:srcCompat="@drawable/baseline_outlined_flag_24" />
 
-    <ImageView
-        android:id="@+id/detailedEventTitleIcon"
-        android:layout_width="24dp"
-        android:layout_height="19dp"
-        android:layout_above="@+id/divider"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        tools:srcCompat="@drawable/baseline_outlined_flag_24" />
+        <View
+            android:id="@+id/dividerHorizontal1"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/divider4"
+            android:layout_alignBottom="@+id/detailedEventImageRoundedCorners"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toStartOf="@+id/detailedEventTypeIcon"
+            android:background="?android:attr/listDivider" />
 
-    <View
-        android:id="@+id/dividerHorizontal1"
-        android:layout_width="2dp"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/divider4"
-        android:layout_alignBottom="@+id/detailedEventPicture"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="0dp"
-        android:layout_toStartOf="@+id/detailedEventTypeIcon"
-        android:background="?android:attr/listDivider" />
-
-    <View
-        android:id="@+id/dividerHorizontal2"
-        android:layout_width="2dp"
-        android:layout_height="match_parent"
-        android:layout_alignBottom="@+id/detailedEventPicture"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="0dp"
-        android:layout_toStartOf="@+id/detailedEventPicture"
-        android:background="?android:attr/listDivider" />
+        <View
+            android:id="@+id/dividerHorizontal2"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/detailedEventImageRoundedCorners"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toStartOf="@+id/detailedEventImageRoundedCorners"
+            android:background="?android:attr/listDivider" />
 
         <ImageView
             android:id="@+id/detailedEventTypeIcon"
             android:layout_width="60dp"
             android:layout_height="100dp"
-            android:layout_alignTop="@+id/detailedEventPicture"
-            android:layout_alignBottom="@+id/detailedEventPicture"
+            android:layout_alignTop="@+id/detailedEventImageRoundedCorners"
+            android:layout_alignBottom="@+id/detailedEventImageRoundedCorners"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="0dp"
             android:layout_toStartOf="@+id/dividerHorizontal2"
             app:srcCompat="@drawable/icon_pattisserie_24" />
 
-        <ImageView
-            android:id="@+id/detailedEventPicture"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/detailedEventImageRoundedCorners"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="0dp" />
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/rounded_corners">
 
-    <ImageView
-        android:id="@+id/detailedEventTimeIcon"
-        android:layout_width="24dp"
-        android:layout_height="19dp"
-        android:layout_below="@+id/divider2"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        tools:srcCompat="@drawable/baseline_access_time_24" />
+            <ImageView
+                android:id="@+id/detailedEventPicture"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="0dp" />
+        </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/detailedEventTime"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/divider2"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_toStartOf="@+id/dividerHorizontal1"
-        android:layout_toEndOf="@+id/detailedEventTimeIcon"
-        android:text="Event Time"
-        android:textColor="@color/secondary_icons_and_texts"
-        android:textStyle="italic" />
+        <ImageView
+            android:id="@+id/detailedEventTimeIcon"
+            android:layout_width="24dp"
+            android:layout_height="19dp"
+            android:layout_below="@+id/divider2"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            tools:srcCompat="@drawable/baseline_access_time_24" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_above="@+id/divider4"
-        android:layout_marginBottom="0dp" />
+        <TextView
+            android:id="@+id/detailedEventTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider2"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_toStartOf="@+id/dividerHorizontal1"
+            android:layout_toEndOf="@+id/detailedEventTimeIcon"
+            android:text="Event Time"
+            android:textColor="@color/secondary_icons_and_texts"
+            android:textStyle="italic" />
 
-    <View
-        android:id="@+id/divider4"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_alignParentStart="false"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="0dp"
-        android:background="?android:attr/listDivider" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_above="@+id/divider4"
+            android:layout_marginBottom="0dp" />
 
-    <TextView
-        android:id="@+id/eventPassphrase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/detailedEventAddressIcon"
-        android:layout_alignTop="@+id/detailedEventAddressIcon"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="0dp"
-        android:layout_toStartOf="@+id/eventAddress"
-        android:text="TextView"
-        android:visibility="invisible" />
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="?android:attr/listDivider" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:layout_below="@+id/detailedEventTime"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_toStartOf="@+id/detailedEventTypeIcon" />
+        <TextView
+            android:id="@+id/eventPassphrase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/detailedEventAddressIcon"
+            android:layout_alignTop="@+id/detailedEventAddressIcon"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toStartOf="@+id/eventAddress"
+            android:text="TextView"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/detailedEventTime"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_toStartOf="@+id/detailedEventTypeIcon" />
 
     </RelativeLayout>
 </RelativeLayout>
