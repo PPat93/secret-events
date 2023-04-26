@@ -31,6 +31,7 @@ public class Shared {
         eventImagesMap.put("pct_ghost_tour", R.drawable.pct_ghost_tour);
         eventImagesMap.put("pct_shrinks_office", R.drawable.pct_shrinks_office);
         eventImagesMap.put("pct_trdelnik_coffe", R.drawable.pct_trdelnik_coffe);
+        eventImagesMap.put("pct_signal", R.drawable.pct_signal);
     }
 
     public static Integer getEventImagesMap(String hashKey) {
