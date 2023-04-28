@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-//        Welcoming splash screen, displayed with each app boot for 5 seconds - I know that it is not
+//        Welcoming splash screen, displayed with each app boot for 13,5 seconds - I know that it is not
 //        a correct way to set up a splash screen, but it is meant to be a welcome and to make an impression
 //        also, the app is loading too quickly for the correct way
         welcomeDelay.postDelayed(new Runnable() {
