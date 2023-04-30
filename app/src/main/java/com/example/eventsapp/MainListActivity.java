@@ -115,6 +115,13 @@ public class MainListActivity extends AppCompatActivity {
         return dbRecordsRetrieved;
     }
 
+    @Override
+    public void onBackPressed() {
+//       on back button pressed nothing happens - disables back button on the main list, so it is not
+//       possible to go back to welcome screen (activity_main layout) or to any of the previous layouts.
+//       However, it is still possible to move back to the main list from any layout by pressing back button
+    }
+
     public void openAddView() {
         Intent openAddViewIntent = new Intent(this, AddView.class);
         startActivity(openAddViewIntent);
