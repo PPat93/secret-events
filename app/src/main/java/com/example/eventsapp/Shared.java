@@ -23,18 +23,44 @@ public class Shared {
         eventImagesMap.put("testimg", R.drawable.testimg);
         eventImagesMap.put("testimg2", R.drawable.testimg2);
         eventImagesMap.put("testimg3", R.drawable.testimg3);
+
+//            MISC
         eventImagesMap.put("example", R.drawable.example);
-        eventImagesMap.put("pct_sex_machines_museum", R.drawable.pct_sex_machines_museum);
-        eventImagesMap.put("pct_naplavka_market", R.drawable.pct_naplavka_market);
-        eventImagesMap.put("pct_frites_butik", R.drawable.pct_frites_butik);
         eventImagesMap.put("pct_flight_to", R.drawable.pct_flight_to);
-        eventImagesMap.put("pct_ghost_tour", R.drawable.pct_ghost_tour);
+
+//            FOOD
+//            Breakfast
+        eventImagesMap.put("pct_naplavka_market", R.drawable.pct_naplavka_market);
+
+//            Lunch/Dinner
+
+//            Supper
+        eventImagesMap.put("pct_frites_butik", R.drawable.pct_frites_butik);
+
+//            Pubs/Additional food
         eventImagesMap.put("pct_shrinks_office", R.drawable.pct_shrinks_office);
         eventImagesMap.put("pct_trdelnik_coffe", R.drawable.pct_trdelnik_coffe);
+
+//            Fine Dining
+
+//            PLACES TO VISIT
+//            Activities
+        eventImagesMap.put("pct_ghost_tour", R.drawable.pct_ghost_tour);
         eventImagesMap.put("pct_signal", R.drawable.pct_signal);
-        eventImagesMap.put("pct_charles_bridge", R.drawable.pct_charles_bridge);
-        eventImagesMap.put("pct_palace", R.drawable.pct_palace);
+
+//            Attractions
         eventImagesMap.put("pct_petrin", R.drawable.pct_petrin);
+        eventImagesMap.put("pct_palace", R.drawable.pct_palace);
+        eventImagesMap.put("pct_sex_machines_museum", R.drawable.pct_sex_machines_museum);
+
+//            Strolling
+        eventImagesMap.put("pct_charles_bridge", R.drawable.pct_charles_bridge);
+        eventImagesMap.put("pct_municipal_library", R.drawable.pct_municipal_library);
+        eventImagesMap.put("pct_brama_prochowa", R.drawable.pct_brama_prochowa);
+        eventImagesMap.put("pct_franz_kafka", R.drawable.pct_franz_kafka);
+
+//            Misc
+
     }
 
     public static Integer getEventImagesMap(String hashKey) {
