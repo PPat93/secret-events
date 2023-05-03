@@ -52,6 +52,8 @@ public class Shared {
         eventImagesMap.put("pct_petrin", R.drawable.pct_petrin);
         eventImagesMap.put("pct_palace", R.drawable.pct_palace);
         eventImagesMap.put("pct_sex_machines_museum", R.drawable.pct_sex_machines_museum);
+        eventImagesMap.put("pct_na_film", R.drawable.pct_na_film);
+        eventImagesMap.put("pct_vysehrad_national_monument", R.drawable.pct_vysehrad_national_monument);
 
 //            Strolling
         eventImagesMap.put("pct_charles_bridge", R.drawable.pct_charles_bridge);
