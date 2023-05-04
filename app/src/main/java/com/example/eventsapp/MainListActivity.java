@@ -108,9 +108,9 @@ public class MainListActivity extends AppCompatActivity {
         c.close();
 
         // START DEBUG
-        dbRecordsRetrieved.forEach((key, value) -> {
-            Log.i(key, value.toString());
-        });
+//        dbRecordsRetrieved.forEach((key, value) -> {
+//            Log.i(key, value.toString());
+//        });
         // END DEBUG
         return dbRecordsRetrieved;
     }
