@@ -65,6 +65,7 @@ public class Shared {
         eventImagesMap.put("pct_dancing_house", R.drawable.pct_dancing_house);
 
 //            Misc
+        eventImagesMap.put("pct_dupa", R.drawable.pct_dupa);
 
     }
 
