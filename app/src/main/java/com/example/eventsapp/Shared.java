@@ -51,15 +51,18 @@ public class Shared {
 //            Attractions
         eventImagesMap.put("pct_petrin", R.drawable.pct_petrin);
         eventImagesMap.put("pct_palace", R.drawable.pct_palace);
-        eventImagesMap.put("pct_sex_machines_museum", R.drawable.pct_sex_machines_museum);
         eventImagesMap.put("pct_na_film", R.drawable.pct_na_film);
         eventImagesMap.put("pct_vysehrad_national_monument", R.drawable.pct_vysehrad_national_monument);
+        eventImagesMap.put("pct_sex_machines_museum", R.drawable.pct_sex_machines_museum);
+        eventImagesMap.put("pct_astronomical_clock", R.drawable.pct_astronomical_clock);
+        eventImagesMap.put("pct_palac_lobkowiczow", R.drawable.pct_palac_lobkowiczow);
 
 //            Strolling
         eventImagesMap.put("pct_charles_bridge", R.drawable.pct_charles_bridge);
         eventImagesMap.put("pct_municipal_library", R.drawable.pct_municipal_library);
         eventImagesMap.put("pct_brama_prochowa", R.drawable.pct_brama_prochowa);
         eventImagesMap.put("pct_franz_kafka", R.drawable.pct_franz_kafka);
+        eventImagesMap.put("pct_dancing_house", R.drawable.pct_dancing_house);
 
 //            Misc
 

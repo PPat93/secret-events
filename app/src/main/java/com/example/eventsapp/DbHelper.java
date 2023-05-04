@@ -97,10 +97,16 @@ public class DbHelper {
                     "VALUES ('czeski film', 'Narodowe muzeum filmowe', 'Attraction', 'Jungmannova 748/30, 110 00 Nové Město, Czechy', 'Pełne zanurzenie w oparach absurdu czeskiego kina! Narodowe muzum filmowe wprowadzi Cię w tajniki wielkiego ekranu, ale też udowodni, że nie bez powodu powstało w Polsce powiedzenie ''Czeski film''. Zachwyć się i pośmiej w tym jedynym w swoim rodzaju interktywnym muzeum opowiadającym o sztuce filmowej.', '0', '12:00', 'pct_na_film', '1050000')");
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('za darmo to uczciwa cena', 'Vysehrad czyli kompleks zamkowy', 'Attraction', 'V Pevnosti 159/5b, 128 00 Praha 2-Vyšehrad, Czechy', 'Darmowy kompleks zamkowy Vysehrad kusi nie tylko uczciwą ceną, ale też przepięknymi parkam i dawnymi budynkami. W okolicy natrafisz na małe galerie, muzea i ruiny ''Tego drugiego zamku''. Ubierz dobre buty i zadbaj o butelkę z wodą, bo fosa niestety już dawno wyschła', '0', '12:00', 'pct_vysehrad_national_monument', '1075000')");
-MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "VALUES ('za darmo to uczciwa cena', 'Vysehrad czyli kompleks zamkowy', 'Attraction', 'V Pevnosti 159/5b, 128 00 Praha 2-Vyšehrad, Czechy', 'Darmowy kompleks zamkowy Vysehrad kusi nie tylko uczciwą ceną, ale też przepięknymi parkam i dawnymi budynkami. W okolicy natrafisz na małe galerie, muzea i ruiny ''Tego drugiego zamku''. Ubierz dobre buty i zadbaj o butelkę z wodą, bo fosa niestety już dawno wyschła.', '0', '12:00', 'pct_vysehrad_national_monument', '1075000')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('śmieszne ruchanki', 'Muzeum maszyn seksualnych', 'Attraction', 'Melantrichova 476 /18, 110 00 Staré Město, Czechy', 'Nie będę ukrywać, nie jest to muzeum z Amsterdamu. Wrzuciłem tu jako backup, gdyby inne opcje zawiodły. Jednakże, mimo wszystko można się tu dobrze - he he - zabawić. Maszyny do seksu wszelkich rodzajów i wielkości czekają na Ciebie! Kto wie, być może odnajdziesz tam parę pomysłów i inspiracji?', '0', '12:00', 'pct_sex_machines_museum', '1082500')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('czas ucieka', '...wietrzność czeka', 'Attraction', 'Staroměstské nám. 1, 110 00 Josefov, Czechy', 'Jeden z najsłynniejszych zegarów astronomicznych na świecie. Uważaj, może akurat wydarzy się koniunkcja planet, która - jak wiemy z filmów - nigdy nie zwiastuje niczego dobrego. A na dokładkę, obejrzyj sobie obok ratusz z XIVw. Nie jest tak skomplikowany jak zegar, ale z pewnością robi nie mniejsze wrażenie.', '0', '12:00', 'pct_astronomical_clock', '1091250')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('kolejny pałac', 'Dwór Lobkowiczów', 'Attraction', 'Jiřská 3, 119 00 Praha 1-Hradčany, Czechy', 'Lobkowiczký palác to jedyny prywatny obiekt w kompleksie zamkowym. Muzeum wewnątrz zawiera zbiór rodziny Lobkowiczów, będący jednym z największych i najstarszych zbiorów w czechach. Nie ukrywam, musiało coś srogo nie wypalić skoro płacimy za kolejne muzemu w ciągu ostatnich 3 godzin. Nogi Cię nie bolą? No nic, dawaj. Może trafimy akurat na koncert muzyki klasycznej?', '0', '12:00', 'pct_palac_lobkowiczow', '1095625')");
 
 //            Strolling
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
@@ -115,8 +121,14 @@ MainListActivity.eventsDB.execSQL("INSERT INTO " +
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('to nie karuzela', 'Obrotowa głowa Franza Kafki', 'Sightseeing', 'Charvátova, 110 00 Nové Město, Czechy', 'Gdzież indziej można było postawić pomnika Franza Kafki jeśli nie obok jego byłego miejsca pracy (dawniej urząd, obecnie budynek towarzystwa ubezpieczeniowego) w mieście gdzie spędził większość życia? Ogromna metalowa rzeźba o wadze 39 ton robi niesamowite wrażenie, dodatkowo, cyklicznie wykonywane obroty zmieniają dynamikę obiektu i zapewniają niesamowite doznania wizualne.', '0', '14:00', 'pct_franz_kafka', '1400000')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('idz do domu, jesteś pijany', 'Tańczący dom', 'Sightseeing', 'Jiráskovo nám. 1981/6, 120 00 Nové Město, Czechy', 'Tańczący dom to jeden z najbardziej rozpoznawalnych budynków w Czechach. I jednocześnie jakiś taki... nietaki - coś jak krzywy domek w sopocie. To co prawda tylko przystanek na dłuższej trasie, ale i tak jest interesujący. Nie marudź, coś innego nie wypaliło skoro to Ci pokazuję.', '0', '14:00', 'pct_dancing_house', '1500000')");
 
 //            Misc
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('dupa', 'Bardzo dojrzałe...', 'Sightseeing', 'Odwróć się i pochyl', 'Skąd wiedziałem że to wpiszesz? Ale z Ciebie dzieciuch, no wiesz co... No nic, doceniam ~kreatywność~, masz mema w nagrodę. Niestety nie znalazłem nic śmieszniejszego o dupie. Podrzuć mi hasło ''Bułeczka'', to dostaniesz nagrodę ;)', '0', 'Wieczorem', 'pct_dupa', '1600000')");
 
 
         }
