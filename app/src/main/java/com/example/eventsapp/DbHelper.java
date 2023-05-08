@@ -52,6 +52,10 @@ public class DbHelper {
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('jedziemy na wycieczkę', '...bierzemy misia w teczkę, cel: PRAGA!', 'Flight', 'Dublin Airport', 'Właśnie tu rozpocznie się Twoja wielka przygoda z okazji 30 urodzin! Weź mnie za rękę, odpręż się i ciesz wycieczką. Daj się ponieść i niczym nie przejmuj. Całość została zorganizowana, co do minuty, przez Twoją bratnią duszę. Dobrej zabawy!', '0', 'Sobota 9:15', 'pct_flight_to', '200000')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('dupa', 'Bardzo dojrzałe...', 'Sightseeing', 'Odwróć się i pochyl', 'Skąd wiedziałem że to wpiszesz? Ale z Ciebie dzieciuch, no wiesz co... No nic, doceniam ~kreatywność~, masz mema w nagrodę. Niestety nie znalazłem nic śmieszniejszego o dupie. Podrzuć mi hasło ''Bułeczka'', to dostaniesz nagrodę ;)', '0', 'Wieczorem', 'pct_dupa', '1600000')");
+
 
 //            FOOD
 //            Breakfast
@@ -107,6 +111,9 @@ public class DbHelper {
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('kolejny pałac', 'Dwór Lobkowiczów', 'Attraction', 'Jiřská 3, 119 00 Praha 1-Hradčany, Czechy', 'Lobkowiczký palác to jedyny prywatny obiekt w kompleksie zamkowym. Muzeum wewnątrz zawiera zbiór rodziny Lobkowiczów, będący jednym z największych i najstarszych zbiorów w czechach. Nie ukrywam, musiało coś srogo nie wypalić skoro płacimy za kolejne muzemu w ciągu ostatnich 3 godzin. Nogi Cię nie bolą? No nic, dawaj. Może trafimy akurat na koncert muzyki klasycznej?', '0', '12:00', 'pct_palac_lobkowiczow', '1095625')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('narodowe dziwadło', 'Zauważyłem, że lubisz teatr', 'Attraction', 'Národní 2, 110 00 Nové Město, Czechy', 'Z tego powodu Narodni Divadlo zostało wybrane by poszerzyć Twoje horyzonty. Właściwie to sama nazwa wszystko wyjaśnia - Teatr Narodowy, zwiedzanko z przewodnikiem. Jeden z najbardziej wyróżniających się budynków w okolicy. Wnętrza bogato zdobione złotem zostały dodatkowo udekorowane malowidłami najznamienitszych czeskich malarzy. Aha, dodatkowo kręcono tu fragmenty Jamesa Bonda Casino Royale.', '0', '12:00', 'pct_narodni_divadlo', '1097812')");
 
 //            Strolling
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
@@ -124,12 +131,14 @@ public class DbHelper {
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('idz do domu, jesteś pijany', 'Tańczący dom', 'Sightseeing', 'Jiráskovo nám. 1981/6, 120 00 Nové Město, Czechy', 'Tańczący dom to jeden z najbardziej rozpoznawalnych budynków w Czechach. I jednocześnie jakiś taki... nietaki - coś jak krzywy domek w sopocie. To co prawda tylko przystanek na dłuższej trasie, ale i tak jest interesujący. Nie marudź, coś innego nie wypaliło skoro to Ci pokazuję.', '0', '14:00', 'pct_dancing_house', '1500000')");
-
-//            Misc
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('dupa', 'Bardzo dojrzałe...', 'Sightseeing', 'Odwróć się i pochyl', 'Skąd wiedziałem że to wpiszesz? Ale z Ciebie dzieciuch, no wiesz co... No nic, doceniam ~kreatywność~, masz mema w nagrodę. Niestety nie znalazłem nic śmieszniejszego o dupie. Podrzuć mi hasło ''Bułeczka'', to dostaniesz nagrodę ;)', '0', 'Wieczorem', 'pct_dupa', '1600000')");
+                    "VALUES ('musiał być kościół', 'Kościół Marii Panny przed Tynem', 'Sightseeing', 'Staroměstské nám., 110 00 Staré Město, Czechy', 'O co chodzi w nazwie tego kościoła? Totalnie nie mam pojęcia. Jednakże, wysokie opinie, darmowy wstęp i podobno niesamowite wnętrze zachęcają do zwiedzania. Poza tym, jeden z bardziej rozpoznawalnych i widocznych kościołów w Pradze. Plus jest na naszej trasie spacerków. Chodźmy do środka podziwiać niepotrzebnie wywalone pieniądze i zmarnowane życia robotników (xD) ', '0', '14:00', 'pct_church_tyn', '1600000')");
+ MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('tajemniczy ogród', 'Valdštejnská zahrada', 'Sightseeing', 'Letenská 123/4, 118 00 Malá Strana, Czechy', 'Tytuł trochę zadziwia, co? Nie bój się - to tylko 17-wieczne ogrody. Pomniki, statuły, pawie, fontanny, a nawet ściana artyficjalnych stalaktytów - wszystko to i jeszcze więcej czeka na odkrycie w przyzamkowych ogrodach. Zanurz się w zieloności i jak łódka... popłyń.', '0', '14:00', 'pct_gardens', '1700000')");
 
+//            Misc
 
         }
     }

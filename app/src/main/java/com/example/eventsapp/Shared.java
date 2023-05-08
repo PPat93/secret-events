@@ -27,6 +27,7 @@ public class Shared {
 //            MISC
         eventImagesMap.put("example", R.drawable.example);
         eventImagesMap.put("pct_flight_to", R.drawable.pct_flight_to);
+        eventImagesMap.put("pct_dupa", R.drawable.pct_dupa);
 
 //            FOOD
 //            Breakfast
@@ -56,6 +57,7 @@ public class Shared {
         eventImagesMap.put("pct_sex_machines_museum", R.drawable.pct_sex_machines_museum);
         eventImagesMap.put("pct_astronomical_clock", R.drawable.pct_astronomical_clock);
         eventImagesMap.put("pct_palac_lobkowiczow", R.drawable.pct_palac_lobkowiczow);
+        eventImagesMap.put("pct_narodni_divadlo", R.drawable.pct_narodni_divadlo);
 
 //            Strolling
         eventImagesMap.put("pct_charles_bridge", R.drawable.pct_charles_bridge);
@@ -63,9 +65,10 @@ public class Shared {
         eventImagesMap.put("pct_brama_prochowa", R.drawable.pct_brama_prochowa);
         eventImagesMap.put("pct_franz_kafka", R.drawable.pct_franz_kafka);
         eventImagesMap.put("pct_dancing_house", R.drawable.pct_dancing_house);
+        eventImagesMap.put("pct_church_tyn", R.drawable.pct_church_tyn);
+        eventImagesMap.put("pct_gardens", R.drawable.pct_gardens);
 
 //            Misc
-        eventImagesMap.put("pct_dupa", R.drawable.pct_dupa);
 
     }
 
