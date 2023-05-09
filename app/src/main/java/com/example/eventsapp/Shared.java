@@ -32,6 +32,8 @@ public class Shared {
 //            FOOD
 //            Breakfast
         eventImagesMap.put("pct_naplavka_market", R.drawable.pct_naplavka_market);
+        eventImagesMap.put("pct_bistro_monk", R.drawable.pct_bistro_monk);
+        eventImagesMap.put("pct_venue", R.drawable.pct_venue);
 
 //            Lunch/Dinner
 
@@ -58,6 +60,7 @@ public class Shared {
         eventImagesMap.put("pct_astronomical_clock", R.drawable.pct_astronomical_clock);
         eventImagesMap.put("pct_palac_lobkowiczow", R.drawable.pct_palac_lobkowiczow);
         eventImagesMap.put("pct_narodni_divadlo", R.drawable.pct_narodni_divadlo);
+        eventImagesMap.put("pct_obecni_dum", R.drawable.pct_obecni_dum);
 
 //            Strolling
         eventImagesMap.put("pct_charles_bridge", R.drawable.pct_charles_bridge);

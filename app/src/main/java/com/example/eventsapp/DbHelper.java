@@ -62,6 +62,12 @@ public class DbHelper {
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('czeska targowica', 'Sobotnie, świeże śniadanie', 'Restaurant', 'Rašínovo nábřeží Vltavská, Náplavka, 120 00 Praha 2, Czechy', 'Farmářské tržiště Náplavka - to sobotni targ nad brzgiem Wełtawy. Lokalni wytwórcy co tydzień wystawiają się w około 90 stoiskach oferując potrawy, wypieki, ceramikę i wiele innych lokalnych produktów. Idealne miejsce na świeże śniadanie.', '0', 'Sobota 9:15', 'pct_naplavka_market', '300000')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('fancy śniadanko', 'Bistro Monk', 'Restaurant', 'Michalská 20, 110 00 Staré Město, Czechy', 'Bistro Monk to knajpka ze śniadaniami w samym centrum Pragi. Z uwagi na wysokie opinie i świetne składniki, może być problem się tam dostać, ale najwyżej poczekamy w kolejce, c''nie? Poza tym zdjęcie mówi wszystko - ładne, dobre i w miarę umirakowane ceny.', '0', 'Sobota 9:15', 'pct_bistro_monk', '350000')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('revenue pewnie wysokie', 'Venue', 'Restaurant', 'Havelská 4, 110 00 Staré Město, Czechy', 'Wymyślne śniadania cały dzień? Toż to spełnienie marzeń! Co prawda rano dostać się na miejsce to podobno koszmar, ale cóź to dla nas? Posiłki nie są ogromne, ale za to może spróbujesz dwóch? A jeśli nie, to dopchniemy Cię na przykład jakimś deserem.', '0', 'Sobota 9:15', 'pct_venue', '355000')");
 
 //            Lunch/Dinner
 
@@ -114,6 +120,9 @@ public class DbHelper {
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('narodowe dziwadło', 'Zauważyłem, że lubisz teatr', 'Attraction', 'Národní 2, 110 00 Nové Město, Czechy', 'Z tego powodu Narodni Divadlo zostało wybrane by poszerzyć Twoje horyzonty. Właściwie to sama nazwa wszystko wyjaśnia - Teatr Narodowy, zwiedzanko z przewodnikiem. Jeden z najbardziej wyróżniających się budynków w okolicy. Wnętrza bogato zdobione złotem zostały dodatkowo udekorowane malowidłami najznamienitszych czeskich malarzy. Aha, dodatkowo kręcono tu fragmenty Jamesa Bonda Casino Royale.', '0', '12:00', 'pct_narodni_divadlo', '1097812')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('obecny dum', 'Obecní dům', 'Attraction', 'Náměstí Republiky 5, 111 21 Staré Město, Czechy', 'Przyznam szczerze, że tłumaczenie nazwy tego miejsca jest co najmniej konfundujące. Najbliższe i najswnsowniejsze co znalazłem to ''Dom reprezentacyjny'' albo po angielsku ''Municipal House''. Tak czy siak - duże, ładne, stare, antyczne, z historią. Jednen z najstarszych budynków secesyjnych. Pełni obecnie funkcje reprezentacyjne. Ma sale koncertowe i zakładam że zwiedzanie zapadnie Ci w pamięć.', '0', '12:00', 'pct_obecni_dum', '1098906')");
 
 //            Strolling
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
@@ -134,7 +143,7 @@ public class DbHelper {
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('musiał być kościół', 'Kościół Marii Panny przed Tynem', 'Sightseeing', 'Staroměstské nám., 110 00 Staré Město, Czechy', 'O co chodzi w nazwie tego kościoła? Totalnie nie mam pojęcia. Jednakże, wysokie opinie, darmowy wstęp i podobno niesamowite wnętrze zachęcają do zwiedzania. Poza tym, jeden z bardziej rozpoznawalnych i widocznych kościołów w Pradze. Plus jest na naszej trasie spacerków. Chodźmy do środka podziwiać niepotrzebnie wywalone pieniądze i zmarnowane życia robotników (xD) ', '0', '14:00', 'pct_church_tyn', '1600000')");
- MainListActivity.eventsDB.execSQL("INSERT INTO " +
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('tajemniczy ogród', 'Valdštejnská zahrada', 'Sightseeing', 'Letenská 123/4, 118 00 Malá Strana, Czechy', 'Tytuł trochę zadziwia, co? Nie bój się - to tylko 17-wieczne ogrody. Pomniki, statuły, pawie, fontanny, a nawet ściana artyficjalnych stalaktytów - wszystko to i jeszcze więcej czeka na odkrycie w przyzamkowych ogrodach. Zanurz się w zieloności i jak łódka... popłyń.', '0', '14:00', 'pct_gardens', '1700000')");
 
