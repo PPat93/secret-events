@@ -17,6 +17,8 @@ public class Shared {
         eventTypesMap.put("Sightseeing", R.drawable.icon_sightseeing_24);
         eventTypesMap.put("Flight", R.drawable.icon_flight_24);
         eventTypesMap.put("Bar", R.drawable.baseline_local_bar_24);
+        eventTypesMap.put("Hotel", R.drawable.baseline_hotel_24);
+        eventTypesMap.put("Breakfast", R.drawable.baseline_breakfast_dining_24);
     }
 
     public static void setEventImagesMap() {
@@ -34,6 +36,8 @@ public class Shared {
         eventImagesMap.put("pct_naplavka_market", R.drawable.pct_naplavka_market);
         eventImagesMap.put("pct_bistro_monk", R.drawable.pct_bistro_monk);
         eventImagesMap.put("pct_venue", R.drawable.pct_venue);
+        eventImagesMap.put("pct_jewel", R.drawable.pct_jewel);
+        eventImagesMap.put("pct_bajgle", R.drawable.pct_bajgle);
 
 //            Lunch/Dinner
 

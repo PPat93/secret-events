@@ -48,26 +48,35 @@ public class DbHelper {
 //            MISC
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('tutorial', 'Tutaj pojawi się tytuł wydarzenia', 'Patisserie', 'Adres w mapach google', 'Krótki opis wydarzenia oraz wszystkie podstawowe informacje pojawią się w tej sekcji.', '0', 'Dzień i godzina wydarzenia', 'example', '100000')"); // TODO - update with our smiled photo, along with all appropriate dates and days - not for public git push
+                    "VALUES ('tutorial', 'Tutaj pojawi się tytuł wydarzenia', 'Patisserie', 'Adres w mapach google', 'Krótki opis wydarzenia oraz wszystkie podstawowe informacje pojawią się w tej sekcji.', '0', 'Dzień i godzina wydarzenia', 'example', '1')"); // TODO - update with our smiled photo, along with all appropriate dates and days - not for public git push
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('jedziemy na wycieczkę', '...bierzemy misia w teczkę, cel: PRAGA!', 'Flight', 'Dublin Airport', 'Właśnie tu rozpocznie się Twoja wielka przygoda z okazji 30 urodzin! Weź mnie za rękę, odpręż się i ciesz wycieczką. Daj się ponieść i niczym nie przejmuj. Całość została zorganizowana, co do minuty, przez Twoją bratnią duszę. Dobrej zabawy!', '0', 'Sobota 9:15', 'pct_flight_to', '200000')");
+                    "VALUES ('jedziemy na wycieczkę', '...bierzemy misia w teczkę, cel: PRAGA!', 'Flight', 'Dublin Airport', 'Właśnie tu rozpocznie się Twoja wielka przygoda z okazji 30 urodzin! Weź mnie za rękę, odpręż się i ciesz wycieczką. Daj się ponieść i niczym nie przejmuj. Całość została zorganizowana, co do minuty, przez Twoją bratnią duszę. Dobrej zabawy!', '0', 'Sobota 9:15', 'pct_flight_to', '100')");
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('dupa', 'Bardzo dojrzałe...', 'Sightseeing', 'Odwróć się i pochyl', 'Skąd wiedziałem że to wpiszesz? Ale z Ciebie dzieciuch, no wiesz co... No nic, doceniam ~kreatywność~, masz mema w nagrodę. Niestety nie znalazłem nic śmieszniejszego o dupie. Podrzuć mi hasło ''Bułeczka'', to dostaniesz nagrodę ;)', '0', 'Wieczorem', 'pct_dupa', '1600000')");
+                    "VALUES ('dupa', 'Bardzo dojrzałe...', 'Sightseeing', 'Odwróć się i pochyl', 'Skąd wiedziałem że to wpiszesz? Ale z Ciebie dzieciuch, no wiesz co... No nic, doceniam ~kreatywność~, masz mema w nagrodę. Niestety nie znalazłem nic śmieszniejszego o dupie. Podrzuć mi hasło ''Bułeczka'', to dostaniesz nagrodę ;)', '0', 'Wieczorem', 'pct_dupa', '200')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('prawie królewskie warunki', 'Królewski hotel czeka', 'Hotel', 'to be filled', 'Fakt, może przesadziłem delikatnie z tytułem, ale z drugiej strony takie oceny i ilość gwiazdek coś obiecują, prawda? Standard wysoki, jest nawet recepcja i prawie samo centrum. Poza tym sorry, nic lepszego w moim budżecie nie było :P To będzie nasza baza wypadowa na kilka najbliższych dni. Jak to mówią, nasze spanko i ru... chu dużo.', '0', 'długo', 'pct_dupa', '300')"); //  TODO add picture, name, address and dates but without pushing to git
 
 
 //            FOOD
 //            Breakfast
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('czeska targowica', 'Sobotnie, świeże śniadanie', 'Restaurant', 'Rašínovo nábřeží Vltavská, Náplavka, 120 00 Praha 2, Czechy', 'Farmářské tržiště Náplavka - to sobotni targ nad brzgiem Wełtawy. Lokalni wytwórcy co tydzień wystawiają się w około 90 stoiskach oferując potrawy, wypieki, ceramikę i wiele innych lokalnych produktów. Idealne miejsce na świeże śniadanie.', '0', 'Sobota 9:15', 'pct_naplavka_market', '300000')");
+                    "VALUES ('czeska targowica', 'Sobotnie, świeże śniadanie', 'Breakfast', 'Rašínovo nábřeží Vltavská, Náplavka, 120 00 Praha 2, Czechy', 'Farmářské tržiště Náplavka - to sobotni targ nad brzgiem Wełtawy. Lokalni wytwórcy co tydzień wystawiają się w około 90 stoiskach oferując potrawy, wypieki, ceramikę i wiele innych lokalnych produktów. Idealne miejsce na świeże śniadanie.', '0', 'Sobota 9:15', 'pct_naplavka_market', '300000')");
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('fancy śniadanko', 'Bistro Monk', 'Restaurant', 'Michalská 20, 110 00 Staré Město, Czechy', 'Bistro Monk to knajpka ze śniadaniami w samym centrum Pragi. Z uwagi na wysokie opinie i świetne składniki, może być problem się tam dostać, ale najwyżej poczekamy w kolejce, c''nie? Poza tym zdjęcie mówi wszystko - ładne, dobre i w miarę umirakowane ceny.', '0', 'Sobota 9:15', 'pct_bistro_monk', '350000')");
+                    "VALUES ('fancy śniadanko', 'Bistro Monk', 'Breakfast', 'Michalská 20, 110 00 Staré Město, Czechy', 'Bistro Monk to knajpka ze śniadaniami w samym centrum Pragi. Z uwagi na wysokie opinie i świetne składniki, może być problem się tam dostać, ale najwyżej poczekamy w kolejce, c''nie? Poza tym zdjęcie mówi wszystko - ładne, dobre i w miarę umirakowane ceny.', '0', 'Sobota 9:15', 'pct_bistro_monk', '350000')");
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('revenue pewnie wysokie', 'Venue', 'Restaurant', 'Havelská 4, 110 00 Staré Město, Czechy', 'Wymyślne śniadania cały dzień? Toż to spełnienie marzeń! Co prawda rano dostać się na miejsce to podobno koszmar, ale cóź to dla nas? Posiłki nie są ogromne, ale za to może spróbujesz dwóch? A jeśli nie, to dopchniemy Cię na przykład jakimś deserem.', '0', 'Sobota 9:15', 'pct_venue', '355000')");
+                    "VALUES ('revenue pewnie wysokie', 'Venue', 'Breakfast', 'Havelská 4, 110 00 Staré Město, Czechy', 'Wymyślne śniadania cały dzień? Toż to spełnienie marzeń! Co prawda rano dostać się na miejsce to podobno koszmar, ale cóź to dla nas? Posiłki nie są ogromne, ale za to może spróbujesz dwóch? A jeśli nie, to dopchniemy Cię na przykład jakimś deserem.', '0', 'Sobota 9:15', 'pct_venue', '355000')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('oby faktycznie brylant', 'Jewel by Venue', 'Breakfast', 'Rytířská 529/3, 110 00 Staré Město, Czechy', 'Sublokal znanego i powszechnie lubianego bistro Venue. Z grubsza to samo - wymyślne śniadania w akompaniamencie długiej kolejki czekającej na stolik. Podobnie tutaj, porcje nie są ogromne, ale za to będziesz miała miejsce na desrki z piekarni!', '0', 'Sobota 9:15', 'pct_jewel', '355500')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('jemy bagle', 'Bajgle na śniadnie?', 'Breakfast', 'Letenská 118/1, 118 00 Malá Strana, Czechy', 'Jak mówiła Smutna Grubaska z TikToka - ''Idziemy jeść bagle!''. Idealnie umiejscowiona restauracja z bajgielkami na śniadanie, w sam raz na naszej trasie do zamku i zwiedzania. Złap jednego albo dwa, z frytkami - żebyś miała dużo siły na oglądanie i podziwianie zabytków. No i poza tym jedz, bo w domu takiego nie ma.', '0', 'Sobota 9:15', 'pct_bajgle', '355550')");
 
 //            Lunch/Dinner
 
