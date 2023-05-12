@@ -79,6 +79,12 @@ public class DbHelper {
                     "VALUES ('jemy bagle', 'Bajgle na śniadnie?', 'Breakfast', 'Letenská 118/1, 118 00 Malá Strana, Czechy', 'Jak mówiła Smutna Grubaska z TikToka - ''Idziemy jeść bagle!''. Idealnie umiejscowiona restauracja Bagel Lounge z bajgielkami na śniadanie, w sam raz na naszej trasie do zamku i zwiedzania. Złap jednego albo dwa, z frytkami - żebyś miała dużo siły na oglądanie i podziwianie zabytków. No i poza tym jedz, bo w domu takiego nie ma.', '0', 'Sobota 9:15', 'pct_bajgle', '355550')");
 
 //            Lunch/Dinner
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('fancy ale z umiarem', 'Jemy u Glaubiců', 'Restaurant', 'Malostranské nám. 266/5, 118 00 Malá Strana, Czechy', 'Czeskie, tradycyjne jedzenie - u Glaubiców - tak naprawdę to jest jedyne tłumaczenie jakie ogarnąłem, więc zapewne jest to nazwisko? Czyli co? Zasmażany syr i piwo? Po zamku na pewno jesteś głodna, a to jest najbliższa sensowna knajpka. Opinie i ich ilość mówią same za siebie. Jest co prawda troszkę fancy, ale w granicach rozsądku. Będziesz zadowolona!', '0', 'Sobota 9:15', 'pct_glaubicowie', '355555')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('ciuchcia', 'Lepszy trainspotting', 'Restaurant', 'Václavské nám. 802/56, 110 00 Nové Město, Czechy', 'Jedzenie zajeżdza na stół pociągiem! I klimat jest naprawdę niepowtarzalny! Jestem mega ciekawy. Ale z drugiej strony to tylko burgery (zwłaszcza że to Twoje święto!), są trochę przepłacone i lokal zawsze full. Plus opinie nie urywają czterech liter. Wrzucam tu jako alternatywkę, gdybyś jakimś cudem chciała burgera :P', '0', 'Sobota 9:15', 'pct_vytopna', '360000')");
 
 //            Supper
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
