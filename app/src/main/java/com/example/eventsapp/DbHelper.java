@@ -84,7 +84,13 @@ public class DbHelper {
                     "VALUES ('fancy ale z umiarem', 'Jemy u Glaubiců', 'Restaurant', 'Malostranské nám. 266/5, 118 00 Malá Strana, Czechy', 'Czeskie, tradycyjne jedzenie - u Glaubiców - tak naprawdę to jest jedyne tłumaczenie jakie ogarnąłem, więc zapewne jest to nazwisko? Czyli co? Zasmażany syr i piwo? Po zamku na pewno jesteś głodna, a to jest najbliższa sensowna knajpka. Opinie i ich ilość mówią same za siebie. Jest co prawda troszkę fancy, ale w granicach rozsądku. Będziesz zadowolona!', '0', 'Sobota 9:15', 'pct_glaubicowie', '355555')");
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
-                    "VALUES ('ciuchcia', 'Lepszy trainspotting', 'Restaurant', 'Václavské nám. 802/56, 110 00 Nové Město, Czechy', 'Jedzenie zajeżdza na stół pociągiem! I klimat jest naprawdę niepowtarzalny! Jestem mega ciekawy. Ale z drugiej strony to tylko burgery (zwłaszcza że to Twoje święto!), są trochę przepłacone i lokal zawsze full. Plus opinie nie urywają czterech liter. Wrzucam tu jako alternatywkę, gdybyś jakimś cudem chciała burgera :P', '0', 'Sobota 9:15', 'pct_vytopna', '360000')");
+                    "VALUES ('ordynarna świnia', 'Pork''s', 'Restaurant', 'Mostecká 16, 110 00 Malá Strana, Czechy', 'No Bób mi świadkiem! Chciałem tego uniknąć. Musiało coś się wydarzyć z Glaubicowami, bo naprawdę nie chciałem Cię brać na tak ordynarne wiejśkie dania ze świni. Ale za to ceny rozsądne, opinie wysokie, blisko zamku po latach zwiedzania - kto wie, może nawet Ci się przypomni nasza kuchnia narodowa?', '0', 'Sobota 9:15', 'pct_pork', '356555')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('ciuchcia', 'Lepszy trainspotting', 'Restaurant', 'Václavské nám. 802/56, 110 00 Nové Město, Czechy', 'Jedzenie zajeżdza na stół pociągiem! I klimat jest naprawdę niepowtarzalny! Jestem mega ciekawy. Ale z drugiej strony to tylko burgery (zwłaszcza że to Twoje święto!), są trochę przepłacone i lokal Výtopna jest zawsze full. Plus opinie nie urywają czterech liter. Wrzucam tu jako alternatywkę, gdybyś jakimś cudem chciała burgera :P', '0', 'Sobota 9:15', 'pct_vytopna', '360000')");
+MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('kluski z mydłem', 'Wielkie knedliska', 'Restaurant', 'Národní 115/24, 110 00 Nové Město, Czechy', 'Jadłaś kiedyś prawdziwe knedle? Ale takie oryginalne od czeskiego chłopa? Nie? No to teraz może nie do końca od chłopa, ale na pewno oryginalne i z Czech!. Kolejny klasyk kuchni naszego sąsiada - ale uważaj, są WIELKIE! Ceny też zajebiste, czyt. nie żałuj sobie bo prędko takich nie zobaczysz.', '0', 'Sobota 9:15', 'pct_knedle', '366000')");
 
 //            Supper
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
@@ -110,6 +116,9 @@ public class DbHelper {
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('jakubie zrób mi loda', 'Crème de la Crème', 'IceCream', '12, Husova 231, Staré Město, 110 00, Czechy', 'Z jakiegoś powodu ludzie dostają szału gdy słyszą nazwę ''Crème de la Crème - Zmrzlinárna Husova''. Przecież to tylko lody! Chociaż nigdy nie możesz być pewna czy to faktycznie TYLKO to. Myślę, że trzeba to sprawdzić. Mam nadzieję że nie będzie zimno - ale z drugiej strony - czy to nas kiedykolwiek powstrzymało przed lodami?', '0', 'Czwartek 10:00', 'pct_crem_de_la', '655550')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('czajniczkowanie', 'Dobrá čajovna Praha-Václavské náměstí', 'Patisserie', 'Václavské nám. 778/14, 110 00 Nové Město, Czechy', 'Mam nadzieję że szlaczki w tytule Cię nie wystraszyły? To dobrze, bo idziemy właśnie do Dobrej Czajowni. No ok, ok. Herbaciarni. Mają herbatki ze wszystkich stron świata, podobno jest nawet jedna niebieska! Jedzenia tam zbyt wiele nie uświadczysz, ale przecież nie o to w tym chodzi.', '0', 'Czwartek 10:00', 'pct_dobra_cajownia', '655555')");
 
 //            Fine Dining
 
