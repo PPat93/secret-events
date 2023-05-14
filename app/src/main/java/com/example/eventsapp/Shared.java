@@ -41,6 +41,7 @@ public class Shared {
         eventImagesMap.put("pct_venue", R.drawable.pct_venue);
         eventImagesMap.put("pct_jewel", R.drawable.pct_jewel);
         eventImagesMap.put("pct_bajgle", R.drawable.pct_bajgle);
+        eventImagesMap.put("pct_wsrod_jeleni", R.drawable.pct_wsrod_jeleni);
 
 //            Lunch/Dinner
         eventImagesMap.put("pct_glaubicowie", R.drawable.pct_glaubicowie);
