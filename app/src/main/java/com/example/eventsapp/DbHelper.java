@@ -165,6 +165,9 @@ public class DbHelper {
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('obecny dum', 'Obecní dům', 'Attraction', 'Náměstí Republiky 5, 111 21 Staré Město, Czechy', 'Przyznam szczerze, że tłumaczenie nazwy tego miejsca jest co najmniej konfundujące. Najbliższe i najswnsowniejsze co znalazłem to ''Dom reprezentacyjny'' albo po angielsku ''Municipal House''. Tak czy siak - duże, ładne, stare, antyczne, z historią. Jednen z najstarszych budynków secesyjnych. Pełni obecnie funkcje reprezentacyjne. Ma sale koncertowe i zakładam że zwiedzanie zapadnie Ci w pamięć.', '0', '12:00', 'pct_obecni_dum', '1098906')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('nie bądź jeleń', 'Muzeum Slivovice R. Jelínek', 'Attraction', 'U Lužického semináře 116/48, 118 00 Malá Strana, Czechy', 'Coś na rozluźnienie - Muzeum kolejnego czeskiego regionalnego produktu - Śliwowicy! Niemal godzinne, jedyne w swoim rodzaju zwiedzanie zakończone jest degustacją 3 lokalnie produkowanych śliwowic oraz 3 rodzajów finger foods. Dzięki temu spróbujesz nie tylko tradycyjnego napitku, ale też doświadczysz autentycznej zagrychy. I może w końcu trochę wyjmiesz kija z... :P', '0', '14:00', 'pct_muzeum_sliwowica', '1098956')");
 
 //            Strolling
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
