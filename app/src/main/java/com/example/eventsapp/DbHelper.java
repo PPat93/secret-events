@@ -77,7 +77,7 @@ public class DbHelper {
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('jemy bagle', 'Bajgle na śniadnie?', 'Breakfast', 'Letenská 118/1, 118 00 Malá Strana, Czechy', 'Jak mówiła Smutna Grubaska z TikToka - ''Idziemy jeść bagle!''. Idealnie umiejscowiona restauracja Bagel Lounge z bajgielkami na śniadanie, w sam raz na naszej trasie do zamku i zwiedzania. Złap jednego albo dwa, z frytkami - żebyś miała dużo siły na oglądanie i podziwianie zabytków. No i poza tym jedz, bo w domu takiego nie ma.', '0', 'Sobota 9:15', 'pct_bajgle', '355550')");
-MainListActivity.eventsDB.execSQL("INSERT INTO " +
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('nie tylko trawa', 'Mezi Srnky', 'Breakfast', 'Sázavská 19, 120 00 Praha 2-Vinohrady, Czechy', '''Wśród Jeleni'', wbrew nazwie nie serwuje wyłącznie wegetariańskich posiłków. Obfite śniadanko w sensownej cenie? Oczywiście, że tak! Miejsce nie jest wielkie, ale za to bardzo popularne i ma niesamowicie wysokie opinie. Dzięki temu będziesz miała dużo siły na mnóstwo chodzenia przez cały dzień.', '0', 'Sobota 9:15', 'pct_wsrod_jeleni', '355555')");
 
@@ -94,6 +94,15 @@ MainListActivity.eventsDB.execSQL("INSERT INTO " +
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('kluski z mydłem', 'Wielkie knedliska', 'Restaurant', 'Národní 115/24, 110 00 Nové Město, Czechy', 'Jadłaś kiedyś prawdziwe knedle? Ale takie oryginalne od czeskiego chłopa? Nie? No to teraz może nie do końca od chłopa, ale na pewno oryginalne i z Czech!. Kolejny klasyk kuchni naszego sąsiada - ale uważaj, są WIELKIE! Ceny też zajebiste, czyt. nie żałuj sobie bo prędko takich nie zobaczysz.', '0', 'Sobota 9:15', 'pct_knedle', '366000')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('falafel z paprykiem', 'Kameralnie po izraelsku', 'Restaurant', 'Rumunská 8/16, 120 00 Vinohrady, Czechy', 'Mała knajpka obiadowa serwująca kuchnię śródziemnomorsko-izraelską. Bardziej na szybki obiad, gdyż zbyt wielu miejsc siedzących tu nie ma. Z drugieh strony, wyśmienite opinie i śmiesznie niskie ceny zachęcają do zajrzenia. No i jest blisko kwaterunku. To co, idziemy zjeść falalefelalela?', '0', 'Sobota 9:15', 'pct_paprika', '366600')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('wcale nie ostre', 'Indyjskie niesamowitości', 'Restaurant', 'Rumunská 15, 120 00 Vinohrady, Czechy', '''Masala IP. Pavlova Indian restaurant'' - indyjskie jedzenie, w świetnych cenach i z niesamowicie wysokimi opiniami. Ewidentnie widać że jedzą tutaj lokalni hindusi. Jedzenie wygląda super (tzn. jak na indyjskie papki), co dodaje od cholery autentyczności. Poza tym baaaaaaaardzo dawno nie byliśmy w takim miejscu. Tylko uważaj z ostrością, żebyśmy nie musieli spędzić dnia w hotelu.', '0', 'Sobota 9:15', 'pct_masala', '366660')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('jaffa ale nie ciastka', 'A może kebsik?', 'Restaurant', 'Na Příkopě 12, 110 00 Staré Město, Czechy', 'Od dawna opowiadałaś, że strasznie chesz zjeść kebaba więc oto jest! Jaffa restaurant! Jednak nie pomyl jej z ciasteczkami, gdyż jest to arabska restauracja halal z najlepszym mięskiem jakie możesz sobie wyobrazić. Troszkę wyższe niż zazwyczaj ceny są wynagradzane przez opinie o obsłudze i jedzeniu. To chyba jedyny typ kuchni który lubimy, a nie jedliśmy od dawna - chyba od Warszawy. No to dawaj na kebsa, niech przypomni Ci się ojczyzna i nasze dawne randki!', '0', 'Sobota 9:15', 'pct_jaffa', '366666')");
 
 //            Supper
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
@@ -122,6 +131,12 @@ MainListActivity.eventsDB.execSQL("INSERT INTO " +
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('czajniczkowanie', 'Dobrá čajovna Praha-Václavské náměstí', 'Teahouse', 'Václavské nám. 778/14, 110 00 Nové Město, Czechy', 'Mam nadzieję że szlaczki w tytule Cię nie wystraszyły? To dobrze, bo idziemy właśnie do Dobrej Czajowni. No ok, ok. Herbaciarni. Mają herbatki ze wszystkich stron świata, podobno jest nawet jedna niebieska! Jedzenia tam zbyt wiele nie uświadczysz, ale przecież nie o to w tym chodzi.', '0', 'Czwartek 10:00', 'pct_dobra_cajownia', '655555')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('czoko spoko zamek', 'Choco Café', 'Patisserie', 'Nerudova 49, 110 00 Malá Strana, Czechy', 'Jedna z dwóch lokalizacji kawiarni czekoladowej, która wręcz krzyczy: JEMY CZEKOLADĘ! Jest niedaleko zamku, więc w sam raz na szybki strzał energii po długim zwiedzaniu. Jest czekoladowe pićko, ciastełko i miłe miejsce do siedzenia. Poza tym sporo rzeczy do kupna - makaroniki, czekolady, ciasteczka, praliny i wiele więcej. Jednym słowem - twoje personalne niebo!', '0', 'Czwartek 10:00', 'pct_choco', '656000')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('czoko spoko centrum', 'Choco Café', 'Patisserie', 'Liliová 250/4, 110 00 Staré Město, Czechy', 'Jedna z dwóch lokalizacji kawiarni czekoladowej, która wręcz krzyczy: JEMY CZEKOLADĘ! Jest w centrum, więc w sam raz na szybki strzał energii po długim zwiedzaniu. Jest czekoladowe pićko, ciastełko i miłe miejsce do siedzenia. Poza tym sporo rzeczy do kupna - makaroniki, czekolady, ciasteczka, praliny i wiele więcej. Jednym słowem - twoje personalne niebo!', '0', 'Czwartek 10:00', 'pct_choco', '656500')");
 
 //            Fine Dining
 

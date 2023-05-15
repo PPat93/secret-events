@@ -48,6 +48,9 @@ public class Shared {
         eventImagesMap.put("pct_pork", R.drawable.pct_pork);
         eventImagesMap.put("pct_vytopna", R.drawable.pct_vytopna);
         eventImagesMap.put("pct_knedle", R.drawable.pct_knedle);
+        eventImagesMap.put("pct_paprika", R.drawable.pct_paprika);
+        eventImagesMap.put("pct_masala", R.drawable.pct_masala);
+        eventImagesMap.put("pct_jaffa", R.drawable.pct_jaffa);
 
 //            Supper
         eventImagesMap.put("pct_frites_butik", R.drawable.pct_frites_butik);
@@ -60,6 +63,7 @@ public class Shared {
         eventImagesMap.put("pct_artic_bakery", R.drawable.pct_artic_bakery);
         eventImagesMap.put("pct_crem_de_la", R.drawable.pct_crem_de_la);
         eventImagesMap.put("pct_dobra_cajownia", R.drawable.pct_dobra_cajownia);
+        eventImagesMap.put("pct_choco", R.drawable.pct_choco);
 
 //            Fine Dining
 
