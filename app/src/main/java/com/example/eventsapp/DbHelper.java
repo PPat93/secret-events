@@ -80,6 +80,15 @@ public class DbHelper {
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('nie tylko trawa', 'Mezi Srnky', 'Breakfast', 'Sázavská 19, 120 00 Praha 2-Vinohrady, Czechy', '''Wśród Jeleni'', wbrew nazwie nie serwuje wyłącznie wegetariańskich posiłków. Obfite śniadanko w sensownej cenie? Oczywiście, że tak! Miejsce nie jest wielkie, ale za to bardzo popularne i ma niesamowicie wysokie opinie. Dzięki temu będziesz miała dużo siły na mnóstwo chodzenia przez cały dzień.', '0', 'Sobota 9:15', 'pct_wsrod_jeleni', '355555')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('słodko słone', 'Kolejne fancy śniadanko', 'Breakfast', 'Anglická 390/19, 120 00 Praha 2-Vinohrady, Czechy', 'Uroczna knajpka nieopodal hotelu z fancy śniadankami. Mają trochę miejsc wewnątrz i na zewnątrz. Jedzenie wygląda niesamowicie, a poza śniadaniami są tu też desery! Dodatkowo, mają lokalny sklepik i można zamówić u nich ciasta, ciastka, granolę, hummus, a nawet jajka! Jeśli Ci zasmakowało, niczym się nie martw i zamów! Odbierzemy przy okazji.', '0', 'Sobota 9:15', 'pct_sweet_peppers', '355600')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('jojko z jojkiem', 'Zagadkowy Oak', 'Breakfast', 'Lublaňská 1837/39, 120 00 Nové Město, Czechy', 'To jest coś niespotykanego - ma tylko 200 opinii, średnia ocen to 4.9, a śniadanie to głównie jajka, jajecznica lub śniadania brytyjskie. Nie wiem o co chodzi, ale ludzie zachwycają się smakiem i obsługą. Może warto spróbować? Zwłaszcza że nie dą daleko i mają kilka wygodnych miejsc siedzących. Aha, widziałem na zjęciach croissanta z pistacjami.', '0', 'Sobota 9:15', 'pct_oak', '355650')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('wafele', 'Coffee & Waffles', 'Breakfast', 'Valentinská 1061/6, 110 00 Staré Město, Czechy', 'Coś co tygryski lubią najbardziej - gofry na milion sposobów! Słodkie? Słone? Bita śmietana? Awokado? Pieczona fasolka? Niesamowity wybór oraz mnóstwo nieoczywistych opcji. O czymkolwiek marzysz, tutaj się spełni! O ile to gofry. Mają dwie lokalizacje, ale zakładam że ta w centrum będzie nam bardziej po drodze. Chodźmy, nie jadłaś takch rarytasów od wielu miesięcy.', '0', 'Sobota 9:15', 'pct_waffels', '355655')");
 
 //            Lunch/Dinner
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
@@ -103,6 +112,9 @@ public class DbHelper {
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('jaffa ale nie ciastka', 'A może kebsik?', 'Restaurant', 'Na Příkopě 12, 110 00 Staré Město, Czechy', 'Od dawna opowiadałaś, że strasznie chesz zjeść kebaba więc oto jest! Jaffa restaurant! Jednak nie pomyl jej z ciasteczkami, gdyż jest to arabska restauracja halal z najlepszym mięskiem jakie możesz sobie wyobrazić. Troszkę wyższe niż zazwyczaj ceny są wynagradzane przez opinie o obsłudze i jedzeniu. To chyba jedyny typ kuchni który lubimy, a nie jedliśmy od dawna - chyba od Warszawy. No to dawaj na kebsa, niech przypomni Ci się ojczyzna i nasze dawne randki!', '0', 'Sobota 9:15', 'pct_jaffa', '366666')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('tanie i dobre', 'U Kroka', 'Restaurant', 'Vratislavova 28/12, 128 00 Praha 2, Czechy', 'Czeska restauracja z wyśmienitym jedzeniem i z ogromną ilością mega pozytywnych opinii. Ceny są nieskie, szczególnie dla opcji lunchowej. Lokal umiejscowiony jest w miarę niedaleko od hotelu i zaraz obok Vysehradu. Restauracja ma ponad 120 lat i radzi sobie wyśmienicie. Jedzonko jest trochę fancy, ale bez przesady. Idealne po spacerach i zwiedzaniu w drugim kompleksie zamkowym.', '0', 'Sobota 9:15', 'pct_u_kroka', '370000')");
 
 //            Supper
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
