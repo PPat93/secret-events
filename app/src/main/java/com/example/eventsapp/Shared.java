@@ -70,6 +70,7 @@ public class Shared {
         eventImagesMap.put("pct_choco", R.drawable.pct_choco);
 
 //            Fine Dining
+        eventImagesMap.put("pct_zatisi", R.drawable.pct_zatisi);
 
 //            Misc
         eventImagesMap.put("pct_louvre", R.drawable.pct_louvre);
@@ -77,6 +78,7 @@ public class Shared {
 //            PLACES TO VISIT
 //            Activities
         eventImagesMap.put("pct_ghost_tour", R.drawable.pct_ghost_tour);
+        eventImagesMap.put("pct_walking_tour", R.drawable.pct_walking_tour);
         eventImagesMap.put("pct_signal", R.drawable.pct_signal);
 
 //            Attractions

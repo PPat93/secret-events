@@ -151,7 +151,9 @@ public class DbHelper {
                     "VALUES ('czoko spoko centrum', 'Choco Café', 'Patisserie', 'Liliová 250/4, 110 00 Staré Město, Czechy', 'Jedna z dwóch lokalizacji kawiarni czekoladowej, która wręcz krzyczy: JEMY CZEKOLADĘ! Jest w centrum, więc w sam raz na szybki strzał energii po długim zwiedzaniu. Jest czekoladowe pićko, ciastełko i miłe miejsce do siedzenia. Poza tym sporo rzeczy do kupna - makaroniki, czekolady, ciasteczka, praliny i wiele więcej. Jednym słowem - twoje personalne niebo!', '0', 'Czwartek 10:00', 'pct_choco', '656500')");
 
 //            Fine Dining
-
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('gwóźdź programu', 'V Zátiši', 'Restaurant', 'Liliová 1, Liliová 216, Staré Město, 110 00 Praha 1, Czechia', 'No i jest, chwila na którą wszyscy czekaliśmy. Najważniejsza i największa atrakcja całego wyjazdu - pierwsze w Twoim życiu Fine Dining! V Zátiši to niewątpliwie jedna z najlepszych restauracji w Pradze. Serwowane jedzenie to mix kuchni czeskiej, europejskiej oraz indyjskiej. Oczywiście jest w przewodniku Michelin. Mam nadzieję że zapamiętasz to doświadzenie do końca życia. Dosłownie niczym się nie przejmuj, wszystko jest już załatwione. Ubierz się ładnie i przygotuj na nieziemskie doznania!', '0', 'Czwartek 10:00', 'pct_zatisi', '656600')");
 
 //            Misc
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
@@ -163,6 +165,9 @@ public class DbHelper {
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('straszne rzeczy', 'Prague Ghosts Walking Tour', 'Event', '7, Týnská 627, Staré Město, 110 00 Praha-Praha 1, Czechia', 'Wyrusz w przerażającą pieszą podróż po ulicach Pragi w akompaniamencie wycia i jęków potępionych dusz. Zwiedzanie starego miasta z przewodnikiem opowiadającym o mieście oraz jego legendach to coś co tygryski lubią najbardziej. Idziemy poznawać mniej oczywistą stronę miasta!', '0', 'Piątek 19:30', 'pct_ghost_tour', '700000')");
+             MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('dawne histerie', 'Walking tour z przewodnikiem', 'Event', 'Na Příkopě 864/28, 110 00 Praha 1-Nové Město, Czechia', 'Na początku chciałem Cię zabrać na wieczorny spacer z przeowdnikiem przebierańcem, strasznymi historiami i legedami dotyczącymi Pragi, ale okazało się że nie ma terminów, a same histore są nudne i tandetne. Tak więc wybieram bardziej dopasowane do Ciebie wydarzenie - Dzienny walking tour z przewodnikiem. Na dodatek tani jak barszcz. No chodź, posłuchamy sobie o historycznej Pradze!', '0', 'Piątek 19:30', 'pct_walking_tour', '770000')");
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('laserowe dokulturalnianko', 'Signal Festival 2023!', 'Event', 'Cała Praga', 'Przygotuj się na mnóstwo chodzenia gdyż oto jest - jedyny w swoim rodzaju świetlny festiwal będący jednocześnie wielką wystawą sztuki. Zanurz się w ulicach Pragi z ukrytymi dziesiątkami instalacji artystycznych. Widowisko każdego dnia po zmroku rozjarzone milionami kolorów', '0', '12-15 Październik', 'pct_signal', '800000')"); // TODO - update with current year photo after tickets are available
