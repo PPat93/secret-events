@@ -48,6 +48,7 @@ public class Shared {
 
 //            Lunch/Dinner
         eventImagesMap.put("pct_glaubicowie", R.drawable.pct_glaubicowie);
+        eventImagesMap.put("pct_bile_kuzelky", R.drawable.pct_bile_kuzelky);
         eventImagesMap.put("pct_pork", R.drawable.pct_pork);
         eventImagesMap.put("pct_vytopna", R.drawable.pct_vytopna);
         eventImagesMap.put("pct_knedle", R.drawable.pct_knedle);

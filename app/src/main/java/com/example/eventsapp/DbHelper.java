@@ -96,6 +96,9 @@ public class DbHelper {
                     "VALUES ('fancy ale z umiarem', 'Jemy u Glaubiců', 'Restaurant', 'Malostranské nám. 266/5, 118 00 Malá Strana, Czechy', 'Czeskie, tradycyjne jedzenie - u Glaubiców - tak naprawdę to jest jedyne tłumaczenie jakie ogarnąłem, więc zapewne jest to nazwisko? Czyli co? Zasmażany syr i piwo? Po zamku na pewno jesteś głodna, a to jest najbliższa sensowna knajpka. Opinie i ich ilość mówią same za siebie. Jest co prawda troszkę fancy, ale w granicach rozsądku. Będziesz zadowolona!', '0', 'Sobota 9:15', 'pct_glaubicowie', '356000')");
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
+                    "VALUES ('jak sie nie ma co się lubi', 'Lokál U Bílé kuželky', 'Restaurant', 'Míšeňská 12, 110 00 Malá Strana, Czechy', 'Czeskie, tradycyjne jedzenie - niestety nie u Glaubiców - coś nie pykło, ale idziemy do bardzo zbliżonej restauracji. Jedyne co to mają połowę mniej opinii, tylko 6k. Piwo ważą sami na miejscu i chwalą się że dają tyle sosu i side dish ile dasz radę zjeść. To teraz przestań się krzywić i pij ten sos!', '0', 'Sobota 9:15', 'pct_bile_kuzelky', '356500')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
                     "VALUES ('ordynarna świnia', 'Pork''s', 'Restaurant', 'Mostecká 16, 110 00 Malá Strana, Czechy', 'No Bób mi świadkiem! Chciałem tego uniknąć. Musiało coś się wydarzyć z Glaubicowami, bo naprawdę nie chciałem Cię brać na tak ordynarne wiejśkie dania ze świni. Ale za to ceny rozsądne, opinie wysokie, blisko zamku po latach zwiedzania - kto wie, może nawet Ci się przypomni nasza kuchnia narodowa?', '0', 'Sobota 9:15', 'pct_pork', '356600')");
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
@@ -165,7 +168,7 @@ public class DbHelper {
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('straszne rzeczy', 'Prague Ghosts Walking Tour', 'Event', '7, Týnská 627, Staré Město, 110 00 Praha-Praha 1, Czechia', 'Wyrusz w przerażającą pieszą podróż po ulicach Pragi w akompaniamencie wycia i jęków potępionych dusz. Zwiedzanie starego miasta z przewodnikiem opowiadającym o mieście oraz jego legendach to coś co tygryski lubią najbardziej. Idziemy poznawać mniej oczywistą stronę miasta!', '0', 'Piątek 19:30', 'pct_ghost_tour', '700000')");
-             MainListActivity.eventsDB.execSQL("INSERT INTO " +
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('dawne histerie', 'Walking tour z przewodnikiem', 'Event', 'Na Příkopě 864/28, 110 00 Praha 1-Nové Město, Czechia', 'Na początku chciałem Cię zabrać na wieczorny spacer z przeowdnikiem przebierańcem, strasznymi historiami i legedami dotyczącymi Pragi, ale okazało się że nie ma terminów, a same histore są nudne i tandetne. Tak więc wybieram bardziej dopasowane do Ciebie wydarzenie - Dzienny walking tour z przewodnikiem. Na dodatek tani jak barszcz. No chodź, posłuchamy sobie o historycznej Pradze!', '0', 'Piątek 19:30', 'pct_walking_tour', '770000')");
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
