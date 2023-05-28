@@ -63,6 +63,7 @@ public class Shared {
 //            Pubs/Additional food
         eventImagesMap.put("pct_shrinks_office", R.drawable.pct_shrinks_office);
         eventImagesMap.put("pct_trdelnik_coffe", R.drawable.pct_trdelnik_coffe);
+        eventImagesMap.put("pct_good_food", R.drawable.pct_good_food);
         eventImagesMap.put("pct_oh_deer", R.drawable.pct_oh_deer);
         eventImagesMap.put("pct_kolacze", R.drawable.pct_kolacze);
         eventImagesMap.put("pct_artic_bakery", R.drawable.pct_artic_bakery);
