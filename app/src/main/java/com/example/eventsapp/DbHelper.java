@@ -209,6 +209,9 @@ public class DbHelper {
             MainListActivity.eventsDB.execSQL("INSERT INTO " +
                     "events " +
                     "VALUES ('nie bądź jeleń', 'Muzeum Slivovice R. Jelínek', 'Attraction', 'U Lužického semináře 116/48, 118 00 Malá Strana, Czechy', 'Coś na rozluźnienie - Muzeum kolejnego czeskiego regionalnego produktu - Śliwowicy! Niemal godzinne, jedyne w swoim rodzaju zwiedzanie zakończone jest degustacją 3 lokalnie produkowanych śliwowic oraz 3 rodzajów finger foods. Dzięki temu spróbujesz nie tylko tradycyjnego napitku, ale też doświadczysz autentycznej zagrychy. I może w końcu trochę wyjmiesz kija z... :P', '0', '14:00', 'pct_muzeum_sliwowica', '1098956')");
+            MainListActivity.eventsDB.execSQL("INSERT INTO " +
+                    "events " +
+                    "VALUES ('upiór w operze', 'Statni Opera', 'Attraction', 'Wilsonova 4, 110 00 Praha 1-Vinohrady, Czechy', 'Kultura? Stary budynek? Ozdobne ściany i obrazy? Wszystko co uwielbiasz w jednym miejscu! Idziemy z przewodnikiem na zwiedzanie Praskiej Opery Narodowej! Żeby nas tylko żaden upiór nie dopadł... Mam nadzieję, że iesamowita architektura wprost zaprze Ci dech w piersi!', '0', '14:00', 'pct_statni_opera', '1099478')");
 
 //            Strolling
             MainListActivity.eventsDB.execSQL("INSERT INTO " +

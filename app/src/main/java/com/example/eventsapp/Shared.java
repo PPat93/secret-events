@@ -94,6 +94,7 @@ public class Shared {
         eventImagesMap.put("pct_narodni_divadlo", R.drawable.pct_narodni_divadlo);
         eventImagesMap.put("pct_obecni_dum", R.drawable.pct_obecni_dum);
         eventImagesMap.put("pct_muzeum_sliwowica", R.drawable.pct_muzeum_sliwowica);
+        eventImagesMap.put("pct_statni_opera", R.drawable.pct_statni_opera);
 
 //            Strolling
         eventImagesMap.put("pct_charles_bridge", R.drawable.pct_charles_bridge);
