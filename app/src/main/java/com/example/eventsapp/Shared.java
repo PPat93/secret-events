@@ -56,6 +56,7 @@ public class Shared {
         eventImagesMap.put("pct_masala", R.drawable.pct_masala);
         eventImagesMap.put("pct_jaffa", R.drawable.pct_jaffa);
         eventImagesMap.put("pct_u_kroka", R.drawable.pct_u_kroka);
+        eventImagesMap.put("pct_ngo", R.drawable.pct_ngo);
 
 //            Supper
         eventImagesMap.put("pct_frites_butik", R.drawable.pct_frites_butik);
@@ -70,6 +71,8 @@ public class Shared {
         eventImagesMap.put("pct_crem_de_la", R.drawable.pct_crem_de_la);
         eventImagesMap.put("pct_dobra_cajownia", R.drawable.pct_dobra_cajownia);
         eventImagesMap.put("pct_choco", R.drawable.pct_choco);
+        eventImagesMap.put("pct_cafe_zahrade", R.drawable.pct_cafe_zahrade);
+        eventImagesMap.put("pct_jedna_basen", R.drawable.pct_jedna_basen);
 
 //            Fine Dining
         eventImagesMap.put("pct_zatisi", R.drawable.pct_zatisi);
@@ -95,6 +98,7 @@ public class Shared {
         eventImagesMap.put("pct_obecni_dum", R.drawable.pct_obecni_dum);
         eventImagesMap.put("pct_muzeum_sliwowica", R.drawable.pct_muzeum_sliwowica);
         eventImagesMap.put("pct_statni_opera", R.drawable.pct_statni_opera);
+        eventImagesMap.put("pct_narodni_museum", R.drawable.pct_narodni_museum);
 
 //            Strolling
         eventImagesMap.put("pct_charles_bridge", R.drawable.pct_charles_bridge);
