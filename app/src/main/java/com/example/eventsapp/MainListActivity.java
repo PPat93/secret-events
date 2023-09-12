@@ -108,11 +108,19 @@ public class MainListActivity extends AppCompatActivity {
         c.close();
 
         // START DEBUG
-        dbRecordsRetrieved.forEach((key, value) -> {
-            Log.i(key, value.toString());
-        });
+//        dbRecordsRetrieved.forEach((key, value) -> {
+//            Log.i(key, value.toString());
+//        });
         // END DEBUG
         return dbRecordsRetrieved;
+    }
+
+    @Override
+    public void onBackPressed() {
+//       on back button pressed nothing happens - disables back button on the main list, so it is not
+//       possible to go back to welcome screen (activity_main layout) or to any of the previous layouts
+//       (e.g. Add passphrase layout with  previously revealed passphrase).
+//       However, it is still possible to move back to the main list from any layout by pressing back button
     }
 
     public void openAddView() {
